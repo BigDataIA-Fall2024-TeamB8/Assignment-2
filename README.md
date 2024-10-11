@@ -8,7 +8,7 @@ Contribution overall:
 2. Rutuja Patil: FastAPI, JWT Authentication, Endpoint testing
 3. Sakshi Aade: Streamlit, Testing, Validations
 
-# Demo link:
+# EC2 Instances links (Running until 10/24/2024):
 # Streamlit application link: http://54.164.101.19:8501/
 # FastAPI application link: http://54.164.101.19:8000/
 # Airflow application link: http://54.164.101.19:8080/
