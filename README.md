@@ -38,7 +38,7 @@ markdownCopy code
 - Choose **Amazon Linux 2** or **Ubuntu** as your operating system.
 
 ### Step 2: Connect to the EC2 Instance
-```bash
+
 ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
 ### EC2 Setup with Docker and Docker Compose
 
