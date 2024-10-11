@@ -83,7 +83,9 @@ Transfer the project files from your local machine to the EC2 instance:
 bashCopy codescp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
 
 
-Directory Overview
+### Directory Overview
+
+
 airflow/: Contains files for Airflow setup.
 .env: Environment variables for Airflow.
 docker-compose.yaml: Docker Compose file for setting up Airflow services.
@@ -97,8 +99,10 @@ Dockerfile.streamlit: Dockerfile for building the Streamlit image.
 fast_api.py: FastAPI application code.
 streamlit_app.py: Streamlit application code.
 requirements.txt: Python dependencies for FastAPI and Streamlit.
-Docker Setup and Deployment
-Build Docker Images:
+
+
+### Docker Setup and Deployment
+### Build Docker Images:
 
 Navigate to the airflow/ and fastapi_streamlit/ directories separately and run the following commands to build the Docker images:
 For Airflow:
