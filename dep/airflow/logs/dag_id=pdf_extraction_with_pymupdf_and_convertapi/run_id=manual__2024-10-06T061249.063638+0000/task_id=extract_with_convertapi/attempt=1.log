@@ -1,0 +1,38 @@
+[2024-10-06T06:12:56.536+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:12:49.063638+00:00 [queued]>
+[2024-10-06T06:12:56.546+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:12:49.063638+00:00 [queued]>
+[2024-10-06T06:12:56.547+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:12:56.547+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-06T06:12:56.547+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:12:56.561+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_convertapi> on 2024-10-06 06:12:49.063638+00:00
+[2024-10-06T06:12:56.566+0000] {standard_task_runner.py:55} INFO - Started process 6582 to run task
+[2024-10-06T06:12:56.568+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'extract_with_convertapi', 'manual__2024-10-06T06:12:49.063638+00:00', '--job-id', '257', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpsqg5ue3w']
+[2024-10-06T06:12:56.570+0000] {standard_task_runner.py:83} INFO - Job 257: Subtask extract_with_convertapi
+[2024-10-06T06:12:56.592+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-06T06:12:56.666+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:12:49.063638+00:00 [running]> on host c14bde59b801
+[2024-10-06T06:12:56.901+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=extract_with_convertapi
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-06T06:12:49.063638+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-06T06:12:49.063638+00:00
+[2024-10-06T06:12:56.901+0000] {logging_mixin.py:137} INFO - Using API Key: secret_t8K0AvcnCWIqlNLt
+[2024-10-06T06:12:57.380+0000] {logging_mixin.py:137} INFO - Failed to extract text. Status Code: 401
+[2024-10-06T06:12:57.381+0000] {logging_mixin.py:137} INFO - Error during ConvertAPI extraction: ConvertAPI Text Extraction Failed with Status Code 401
+[2024-10-06T06:12:57.382+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 137, in extract_with_convertapi
+    text_result = extract_text()
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 108, in extract_text
+    raise Exception(f"ConvertAPI Text Extraction Failed with Status Code {response.status_code}")
+Exception: ConvertAPI Text Extraction Failed with Status Code 401
+[2024-10-06T06:12:57.402+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=extract_with_convertapi, execution_date=20241006T061249, start_date=20241006T061256, end_date=20241006T061257
+[2024-10-06T06:12:57.417+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 257 for task extract_with_convertapi (ConvertAPI Text Extraction Failed with Status Code 401; 6582)
+[2024-10-06T06:12:57.463+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-06T06:12:57.495+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

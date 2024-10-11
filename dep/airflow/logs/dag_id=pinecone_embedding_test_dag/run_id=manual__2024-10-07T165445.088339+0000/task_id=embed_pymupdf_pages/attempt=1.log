@@ -1,0 +1,37 @@
+[2024-10-07T16:54:56.350+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:54:45.088339+00:00 [queued]>
+[2024-10-07T16:54:56.359+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:54:45.088339+00:00 [queued]>
+[2024-10-07T16:54:56.360+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:54:56.360+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T16:54:56.361+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:54:56.375+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): embed_pymupdf_pages> on 2024-10-07 16:54:45.088339+00:00
+[2024-10-07T16:54:56.379+0000] {standard_task_runner.py:55} INFO - Started process 972 to run task
+[2024-10-07T16:54:56.381+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'embed_pymupdf_pages', 'manual__2024-10-07T16:54:45.088339+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmpafwi5w07']
+[2024-10-07T16:54:56.383+0000] {standard_task_runner.py:83} INFO - Job 14: Subtask embed_pymupdf_pages
+[2024-10-07T16:54:56.476+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:54:45.088339+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T16:54:56.572+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=embed_pymupdf_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T16:54:45.088339+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T16:54:45.088339+00:00
+[2024-10-07T16:55:03.406+0000] {logging_mixin.py:137} INFO - Created Pinecone index: pymupdf-index
+[2024-10-07T16:55:04.397+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 0 in index pymupdf-index
+[2024-10-07T16:55:04.749+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 1 in index pymupdf-index
+[2024-10-07T16:55:05.051+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 2 in index pymupdf-index
+[2024-10-07T16:55:06.201+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json, page 0 in index pymupdf-index
+[2024-10-07T16:55:06.840+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json, page 0 in index pymupdf-index
+[2024-10-07T16:55:07.278+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 0 in index pymupdf-index
+[2024-10-07T16:55:07.630+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 1 in index pymupdf-index
+[2024-10-07T16:55:07.957+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 2 in index pymupdf-index
+[2024-10-07T16:55:08.202+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 3 in index pymupdf-index
+[2024-10-07T17:05:08.280+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+[2024-10-07T17:05:09.545+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 0 in index pymupdf-index
+[2024-10-07T17:05:09.921+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 1 in index pymupdf-index
+[2024-10-07T17:05:10.410+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 2 in index pymupdf-index
+[2024-10-07T17:05:10.411+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T17:05:10.438+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=embed_pymupdf_pages, execution_date=20241007T165445, start_date=20241007T165456, end_date=20241007T170510
+[2024-10-07T17:05:10.467+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T17:05:10.497+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

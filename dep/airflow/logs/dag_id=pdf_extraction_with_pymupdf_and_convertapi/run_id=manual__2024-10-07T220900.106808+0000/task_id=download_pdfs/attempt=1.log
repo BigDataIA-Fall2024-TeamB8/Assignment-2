@@ -1,0 +1,26 @@
+[2024-10-07T22:09:03.045+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.download_pdfs manual__2024-10-07T22:09:00.106808+00:00 [queued]>
+[2024-10-07T22:09:03.053+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.download_pdfs manual__2024-10-07T22:09:00.106808+00:00 [queued]>
+[2024-10-07T22:09:03.054+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:09:03.054+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T22:09:03.054+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:09:03.065+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): download_pdfs> on 2024-10-07 22:09:00.106808+00:00
+[2024-10-07T22:09:03.069+0000] {standard_task_runner.py:55} INFO - Started process 14966 to run task
+[2024-10-07T22:09:03.071+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'download_pdfs', 'manual__2024-10-07T22:09:00.106808+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpuxls_clt']
+[2024-10-07T22:09:03.072+0000] {standard_task_runner.py:83} INFO - Job 88: Subtask download_pdfs
+[2024-10-07T22:09:03.158+0000] {task_command.py:376} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.download_pdfs manual__2024-10-07T22:09:00.106808+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T22:09:03.246+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=download_pdfs
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T22:09:00.106808+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T22:09:00.106808+00:00
+[2024-10-07T22:09:03.521+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf to /tmp/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf
+[2024-10-07T22:09:03.815+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/test/example.pdf to /tmp/example.pdf
+[2024-10-07T22:09:03.928+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/validation/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf to /tmp/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf
+[2024-10-07T22:09:03.968+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T22:09:03.989+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=download_pdfs, execution_date=20241007T220900, start_date=20241007T220903, end_date=20241007T220903
+[2024-10-07T22:09:04.047+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T22:09:04.082+0000] {taskinstance.py:2623} INFO - 2 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,25 @@
+[2024-10-07T03:37:23.378+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.list_pdfs_in_s3 manual__2024-10-07T03:37:21.187230+00:00 [queued]>
+[2024-10-07T03:37:23.391+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.list_pdfs_in_s3 manual__2024-10-07T03:37:21.187230+00:00 [queued]>
+[2024-10-07T03:37:23.391+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:37:23.391+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T03:37:23.391+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:37:23.409+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): list_pdfs_in_s3> on 2024-10-07 03:37:21.187230+00:00
+[2024-10-07T03:37:23.417+0000] {standard_task_runner.py:55} INFO - Started process 1404 to run task
+[2024-10-07T03:37:23.420+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'list_pdfs_in_s3', 'manual__2024-10-07T03:37:21.187230+00:00', '--job-id', '325', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpmq6uku5a']
+[2024-10-07T03:37:23.421+0000] {standard_task_runner.py:83} INFO - Job 325: Subtask list_pdfs_in_s3
+[2024-10-07T03:37:23.448+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T03:37:23.542+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.list_pdfs_in_s3 manual__2024-10-07T03:37:21.187230+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T03:37:23.672+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=list_pdfs_in_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T03:37:21.187230+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T03:37:21.187230+00:00
+[2024-10-07T03:37:23.899+0000] {logging_mixin.py:137} INFO - PDF files found in gaia-pdf-unprocessed: ['gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf', 'gaia/2023/test/example.pdf', 'gaia/2023/validation/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf']
+[2024-10-07T03:37:23.936+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T03:37:23.960+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=list_pdfs_in_s3, execution_date=20241007T033721, start_date=20241007T033723, end_date=20241007T033723
+[2024-10-07T03:37:23.995+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T03:37:24.042+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

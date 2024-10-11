@@ -1,0 +1,121 @@
+version: "3.8"
+
+services:
+  fastapi:
+    build:
+      context: ./fastapi_streamlit
+      dockerfile: Dockerfile.fastapi
+    image: fastapi_image
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fastapi_streamlit:/app
+    environment:
+      - HUGGINGFACE_ACCESS_TOKEN
+      - FERNET_KEY
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - CONVERTAPI_SECRET_KEY
+      - OPENAI_API_KEY
+      - RDS_ENDPOINT
+      - RDS_USERNAME
+      - RDS_PASSWORD
+      - RDS_DATABASE
+      - SECRET_KEY
+      - ALGORITHM
+      - ACCESS_TOKEN_EXPIRE_MINUTES
+    depends_on:
+      - db
+
+  streamlit:
+    build:
+      context: ./fastapi_streamlit
+      dockerfile: Dockerfile.streamlit
+    image: streamlit_image
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./fastapi_streamlit:/app
+    environment:
+      - HUGGINGFACE_ACCESS_TOKEN
+      - FERNET_KEY
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - CONVERTAPI_SECRET_KEY
+      - OPENAI_API_KEY
+      - RDS_ENDPOINT
+      - RDS_USERNAME
+      - RDS_PASSWORD
+      - RDS_DATABASE
+      - SECRET_KEY
+      - ALGORITHM
+      - ACCESS_TOKEN_EXPIRE_MINUTES
+    depends_on:
+      - db
+
+  airflow-webserver:
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    image: airflow_image
+    ports:
+      - "8080:8080"
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - HUGGINGFACE_ACCESS_TOKEN
+      - FERNET_KEY
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - CONVERTAPI_SECRET_KEY
+      - OPENAI_API_KEY
+      - RDS_ENDPOINT
+      - RDS_USERNAME
+      - RDS_PASSWORD
+      - RDS_DATABASE
+      - SECRET_KEY
+      - ALGORITHM
+      - ACCESS_TOKEN_EXPIRE_MINUTES
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./airflow/logs:/usr/local/airflow/logs
+      - ./airflow/plugins:/usr/local/airflow/plugins
+    depends_on:
+      - db
+    command: bash -c "airflow db init && airflow webserver"
+
+  airflow-scheduler:
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    image: airflow_image
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - HUGGINGFACE_ACCESS_TOKEN
+      - FERNET_KEY
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - CONVERTAPI_SECRET_KEY
+      - OPENAI_API_KEY
+      - RDS_ENDPOINT
+      - RDS_USERNAME
+      - RDS_PASSWORD
+      - RDS_DATABASE
+      - SECRET_KEY
+      - ALGORITHM
+      - ACCESS_TOKEN_EXPIRE_MINUTES
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./airflow/logs:/usr/local/airflow/logs
+      - ./airflow/plugins:/usr/local/airflow/plugins
+    depends_on:
+      - db
+    command: bash -c "airflow db upgrade && airflow scheduler"
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - ./airflow/postgres_data:/var/lib/postgresql/data

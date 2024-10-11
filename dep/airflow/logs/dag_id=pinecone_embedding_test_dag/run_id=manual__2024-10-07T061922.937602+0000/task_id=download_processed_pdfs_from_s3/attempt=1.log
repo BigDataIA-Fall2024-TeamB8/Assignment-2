@@ -1,0 +1,75 @@
+[2024-10-07T06:19:26.507+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3 manual__2024-10-07T06:19:22.937602+00:00 [queued]>
+[2024-10-07T06:19:26.631+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3 manual__2024-10-07T06:19:22.937602+00:00 [queued]>
+[2024-10-07T06:19:26.632+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T06:19:26.632+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T06:19:26.633+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T06:19:26.647+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): download_processed_pdfs_from_s3> on 2024-10-07 06:19:22.937602+00:00
+[2024-10-07T06:19:26.652+0000] {standard_task_runner.py:55} INFO - Started process 637 to run task
+[2024-10-07T06:19:26.655+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'download_processed_pdfs_from_s3', 'manual__2024-10-07T06:19:22.937602+00:00', '--job-id', '406', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmp6x06clhv']
+[2024-10-07T06:19:26.655+0000] {standard_task_runner.py:83} INFO - Job 406: Subtask download_processed_pdfs_from_s3
+[2024-10-07T06:19:26.680+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T06:19:26.777+0000] {task_command.py:389} INFO - Running <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3 manual__2024-10-07T06:19:22.937602+00:00 [running]> on host 2478cb613add
+[2024-10-07T06:19:26.894+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=download_processed_pdfs_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T06:19:22.937602+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T06:19:22.937602+00:00
+[2024-10-07T06:19:27.183+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json to /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T06:19:27.293+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json to /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-07T06:19:27.395+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json to /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T06:19:27.484+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json to /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-07T06:19:27.574+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json to /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T06:19:27.682+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json to /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-07T06:19:27.774+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json to /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-07T06:19:27.911+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json to /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-07T06:19:28.114+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json to /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T06:19:28.204+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json to /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-07T06:19:28.332+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json to /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-07T06:19:28.439+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json to /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-07T06:19:28.542+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_example.pdf.json to /tmp/convertapi_example.pdf.json
+[2024-10-07T06:19:28.658+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json to /tmp/dochorizon_generic_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T06:19:28.757+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json to /tmp/dochorizon_generic_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-07T06:19:28.890+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json to /tmp/dochorizon_generic_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T06:19:28.994+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json to /tmp/dochorizon_generic_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-07T06:19:29.290+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json to /tmp/dochorizon_generic_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T06:19:29.447+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json to /tmp/dochorizon_generic_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-07T06:19:29.558+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json to /tmp/dochorizon_generic_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-07T06:19:29.659+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json to /tmp/dochorizon_generic_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-07T06:19:29.749+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json to /tmp/dochorizon_generic_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T06:19:29.850+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json to /tmp/dochorizon_generic_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-07T06:19:29.960+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json to /tmp/dochorizon_generic_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-07T06:19:30.060+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_generic_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json to /tmp/dochorizon_generic_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-07T06:19:30.158+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json to /tmp/dochorizon_info_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T06:19:30.264+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json to /tmp/dochorizon_info_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-07T06:19:30.380+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json to /tmp/dochorizon_info_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T06:19:30.499+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json to /tmp/dochorizon_info_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-07T06:19:30.615+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json to /tmp/dochorizon_info_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T06:19:30.704+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json to /tmp/dochorizon_info_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-07T06:19:30.808+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json to /tmp/dochorizon_info_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-07T06:19:30.909+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json to /tmp/dochorizon_info_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-07T06:19:30.998+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json to /tmp/dochorizon_info_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T06:19:31.113+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json to /tmp/dochorizon_info_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-07T06:19:31.214+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json to /tmp/dochorizon_info_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-07T06:19:31.338+0000] {logging_mixin.py:137} INFO - Downloaded dochorizon/dochorizon_info_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json to /tmp/dochorizon_info_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-07T06:19:31.452+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json to /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T06:19:31.544+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json to /tmp/pymupdf_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-07T06:19:31.633+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json to /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T06:19:31.776+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json to /tmp/pymupdf_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-07T06:19:31.897+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json to /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T06:19:32.056+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json to /tmp/pymupdf_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-07T06:19:32.208+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json to /tmp/pymupdf_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-07T06:19:32.315+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json to /tmp/pymupdf_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-07T06:19:32.493+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json to /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T06:19:32.602+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json to /tmp/pymupdf_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-07T06:19:32.797+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json to /tmp/pymupdf_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json
+[2024-10-07T06:19:32.882+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json to /tmp/pymupdf_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-07T06:19:33.001+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json to /tmp/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-07T06:19:33.269+0000] {logging_mixin.py:137} INFO - Downloaded pymupdf/pymupdf_example.pdf.json to /tmp/pymupdf_example.pdf.json
+[2024-10-07T06:19:33.307+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T06:19:33.333+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=download_processed_pdfs_from_s3, execution_date=20241007T061922, start_date=20241007T061926, end_date=20241007T061933
+[2024-10-07T06:19:33.398+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T06:19:33.444+0000] {taskinstance.py:2582} INFO - 2 downstream tasks scheduled from follow-on schedule check

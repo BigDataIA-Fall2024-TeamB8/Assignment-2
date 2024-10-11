@@ -1,0 +1,26 @@
+[2024-10-07T22:13:50.298+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.upload_to_s3 manual__2024-10-07T22:13:38.458809+00:00 [queued]>
+[2024-10-07T22:13:50.310+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.upload_to_s3 manual__2024-10-07T22:13:38.458809+00:00 [queued]>
+[2024-10-07T22:13:50.310+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:13:50.311+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T22:13:50.311+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:13:50.323+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2024-10-07 22:13:38.458809+00:00
+[2024-10-07T22:13:50.328+0000] {standard_task_runner.py:55} INFO - Started process 15232 to run task
+[2024-10-07T22:13:50.330+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'upload_to_s3', 'manual__2024-10-07T22:13:38.458809+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmp8qby9mxe']
+[2024-10-07T22:13:50.332+0000] {standard_task_runner.py:83} INFO - Job 96: Subtask upload_to_s3
+[2024-10-07T22:13:50.417+0000] {task_command.py:376} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.upload_to_s3 manual__2024-10-07T22:13:38.458809+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T22:13:50.506+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T22:13:38.458809+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T22:13:38.458809+00:00
+[2024-10-07T22:13:51.191+0000] {logging_mixin.py:137} INFO - Uploaded results for 021a5339-744f-42b7-bd9b-9368b3efda7a.pdf to S3.
+[2024-10-07T22:13:51.914+0000] {logging_mixin.py:137} INFO - Uploaded results for example.pdf to S3.
+[2024-10-07T22:13:52.411+0000] {logging_mixin.py:137} INFO - Uploaded results for 366e2f2b-8632-4ef2-81eb-bc3877489217.pdf to S3.
+[2024-10-07T22:13:52.412+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T22:13:52.429+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=upload_to_s3, execution_date=20241007T221338, start_date=20241007T221350, end_date=20241007T221352
+[2024-10-07T22:13:52.469+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T22:13:52.495+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

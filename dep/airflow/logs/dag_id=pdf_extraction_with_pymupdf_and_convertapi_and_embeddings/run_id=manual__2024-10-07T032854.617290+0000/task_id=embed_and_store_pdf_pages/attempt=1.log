@@ -1,0 +1,33 @@
+[2024-10-07T03:29:26.398+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.embed_and_store_pdf_pages manual__2024-10-07T03:28:54.617290+00:00 [queued]>
+[2024-10-07T03:29:26.408+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.embed_and_store_pdf_pages manual__2024-10-07T03:28:54.617290+00:00 [queued]>
+[2024-10-07T03:29:26.409+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:29:26.409+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T03:29:26.410+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:29:26.425+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): embed_and_store_pdf_pages> on 2024-10-07 03:28:54.617290+00:00
+[2024-10-07T03:29:26.430+0000] {standard_task_runner.py:55} INFO - Started process 1130 to run task
+[2024-10-07T03:29:26.432+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'embed_and_store_pdf_pages', 'manual__2024-10-07T03:28:54.617290+00:00', '--job-id', '318', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmp0fvy3kqo']
+[2024-10-07T03:29:26.433+0000] {standard_task_runner.py:83} INFO - Job 318: Subtask embed_and_store_pdf_pages
+[2024-10-07T03:29:26.455+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T03:29:26.527+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.embed_and_store_pdf_pages manual__2024-10-07T03:28:54.617290+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T03:29:26.628+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=embed_and_store_pdf_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T03:28:54.617290+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T03:28:54.617290+00:00
+[2024-10-07T03:29:26.692+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 194, in embed_and_store_pdf_pages
+    raise ValueError(f"Missing extracted data paths for {pdf_key}")
+ValueError: Missing extracted data paths for gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf
+[2024-10-07T03:29:26.713+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=embed_and_store_pdf_pages, execution_date=20241007T032854, start_date=20241007T032926, end_date=20241007T032926
+[2024-10-07T03:29:26.728+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 318 for task embed_and_store_pdf_pages (Missing extracted data paths for gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf; 1130)
+[2024-10-07T03:29:26.765+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-07T03:29:26.793+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

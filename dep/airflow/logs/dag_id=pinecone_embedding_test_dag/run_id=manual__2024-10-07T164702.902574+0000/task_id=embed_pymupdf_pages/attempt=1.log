@@ -1,0 +1,231 @@
+[2024-10-07T16:47:14.300+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:47:02.902574+00:00 [queued]>
+[2024-10-07T16:47:14.308+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:47:02.902574+00:00 [queued]>
+[2024-10-07T16:47:14.308+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:47:14.309+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T16:47:14.309+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:47:14.325+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): embed_pymupdf_pages> on 2024-10-07 16:47:02.902574+00:00
+[2024-10-07T16:47:14.329+0000] {standard_task_runner.py:55} INFO - Started process 402 to run task
+[2024-10-07T16:47:14.332+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'embed_pymupdf_pages', 'manual__2024-10-07T16:47:02.902574+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmptpxuldxl']
+[2024-10-07T16:47:14.334+0000] {standard_task_runner.py:83} INFO - Job 5: Subtask embed_pymupdf_pages
+[2024-10-07T16:47:14.434+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.embed_pymupdf_pages manual__2024-10-07T16:47:02.902574+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T16:47:14.537+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=embed_pymupdf_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T16:47:02.902574+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T16:47:02.902574+00:00
+[2024-10-07T16:47:14.990+0000] {logging_mixin.py:137} INFO - Error creating Pinecone index: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '15581f3e5996e7a6fae3a141a27d615f', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '200', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"INVALID_ARGUMENT","message":"Bad request: Your free plan does not support indexes in the us-west-2 region of aws. To create indexes in this region, upgrade your plan."},"status":400}
+[2024-10-07T16:47:15.084+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e32d5b3c7898cbb1598b178f6df698a7', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.192+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '2d91f7ca63be370be714820a9633acb3', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.300+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '288b5e95beeca6367d6162bba04a8ca4', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.398+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '8dd78c3913a55872b0383103f45052b8', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.516+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '2fd82f7afed8351203f7cc79617d2578', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.611+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e9f9fc79e6353b9268645fa883a5db33', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.731+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '1f539aea8e555d4fba399f8923038134', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:15.820+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '11f38b8904efc0b75e49a6484667b7a3', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.004+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '7a550718d9741bb7402c67c37ce84c75', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.196+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'b716fc3b28e3a9b0557bc628e2ef9d84', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.275+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '544bf887da08e90ad244a6cc3e57e3bb', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.384+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'fc6c8d09b9792a30fe21cf791104aab7', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.478+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_example.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '7ff44224906b6a841f4569475fabc498', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.572+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '30eac97562ea3a9c4ea524f59c595b8b', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.776+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'a656e4a114bc3ee93b5b69aaebfda988', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.891+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'cc4dd4fc932ac175a05a6c52b6126a5b', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:16.986+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '750a9dabb0e91059f22cec1ac75c5d6f', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.069+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '96ab34bdd2dee2cf5ae58115d31682ec', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.169+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '340d4e3c3b425f8fd0799280c5168001', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.249+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '7dc592bca93563ceacd413472a4fe2d3', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.378+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '4682f3b76f1b19b461e766941feeb501', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.522+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '264e72582e800a9a4a97f45de6a27a15', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.621+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '853ce2092e32c320d91595ae49f91589', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.709+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '6ceaa6ed15f892a41da9ae9248ee2baf', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.814+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'be30e94328480aa45f562a1bf2ccc8f9', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:17.924+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'd884461d33da12e46ab44a71e2baec70', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.082+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '703d8a11a84914e699c49e95e74f5606', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.204+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '773fe0bacb5ef80d5edca6dffc0f1808', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.302+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'a1320585631a52561998d930eb74d254', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.390+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '8e73dd7f80f8ecc9241c993d11cdfefc', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.482+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '4c526fe4830692d9fe6fc0c34f3a99eb', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.577+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'ac57648e709f28912d63fdee0365e216', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.676+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '3ce90d16d6afff8dbd7ec0e8f4923c09', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.786+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '63190481805f054674a9f537326898a4', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.877+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '9aabf9a8fc1c527afacbe556cba2fec8', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:18.986+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e4523219ea73bd9948d7a7e17389ffd7', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.081+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'c35d2e184eb930dfc05d32c8098a6857', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.194+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'a03a49512e7f5e9ed76827ba1549c65d', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.302+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'c33a0faea8f73ccd01ea1e7da759eae0', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.389+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '6f858054f7a2a56d25622b04426107d6', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.495+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'c658ec6683131bb1f2c51757cbf7b967', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.587+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'f31208dc851929ae24a211c5344bee42', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.694+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'f9f80d8a51c2bce46b3857ea04c08128', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.826+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '559c1451126f2a620d3011f580647b8b', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:19.974+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '790c43f086c619b2a61f251f46f3c4cf', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.083+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5a8681b6ca2019dd167ca4f8a9d99b16', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.176+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'a84aa94a8ad4be76c01d045d2344cb41', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.290+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5f318a9761b6f3f4ffd1c597165f58e2', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.377+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'f138ef2ce3c447f8d7180393b6fefd35', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.470+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '49c7c624574f74dcc2ece20bfaf94d4c', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.584+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_example.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'a84e1f959ff2e143f0330eab263205c9', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '88', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource pymupdf-index not found"},"status":404}
+[2024-10-07T16:47:20.584+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T16:47:20.604+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=embed_pymupdf_pages, execution_date=20241007T164702, start_date=20241007T164714, end_date=20241007T164720
+[2024-10-07T16:47:20.659+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T16:47:20.709+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

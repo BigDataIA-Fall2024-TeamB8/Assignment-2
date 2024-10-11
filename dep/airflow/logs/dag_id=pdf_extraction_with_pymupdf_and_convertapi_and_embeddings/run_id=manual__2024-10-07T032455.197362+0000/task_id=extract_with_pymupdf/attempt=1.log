@@ -1,0 +1,54 @@
+[2024-10-07T03:25:04.127+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:24:55.197362+00:00 [queued]>
+[2024-10-07T03:25:04.141+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:24:55.197362+00:00 [queued]>
+[2024-10-07T03:25:04.142+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:25:04.144+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T03:25:04.144+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:25:04.166+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_pymupdf> on 2024-10-07 03:24:55.197362+00:00
+[2024-10-07T03:25:04.172+0000] {standard_task_runner.py:55} INFO - Started process 961 to run task
+[2024-10-07T03:25:04.175+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'extract_with_pymupdf', 'manual__2024-10-07T03:24:55.197362+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmprxl6u8es']
+[2024-10-07T03:25:04.176+0000] {standard_task_runner.py:83} INFO - Job 311: Subtask extract_with_pymupdf
+[2024-10-07T03:25:04.204+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T03:25:04.302+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:24:55.197362+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T03:25:04.430+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=extract_with_pymupdf
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T03:24:55.197362+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T03:24:55.197362+00:00
+[2024-10-07T03:25:04.465+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T03:25:04.528+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T03:25:04.618+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T03:25:04.701+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 87, in extract_with_pymupdf
+    json.dump(extracted_data, json_file)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/local/lib/python3.7/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/lib/python3.7/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/local/lib/python3.7/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/lib/python3.7/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/local/lib/python3.7/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/local/lib/python3.7/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+[2024-10-07T03:25:04.732+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=extract_with_pymupdf, execution_date=20241007T032455, start_date=20241007T032504, end_date=20241007T032504
+[2024-10-07T03:25:04.753+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 311 for task extract_with_pymupdf (Object of type bytes is not JSON serializable; 961)
+[2024-10-07T03:25:04.790+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-07T03:25:04.840+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

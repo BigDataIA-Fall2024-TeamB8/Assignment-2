@@ -1,0 +1,139 @@
+[2024-10-08T04:13:35.580+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-08T04:13:27.138433+00:00 [queued]>
+[2024-10-08T04:13:35.590+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-08T04:13:27.138433+00:00 [queued]>
+[2024-10-08T04:13:35.590+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08T04:13:35.591+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-08T04:13:35.591+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08T04:13:35.604+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): extract_with_convertapi> on 2024-10-08 04:13:27.138433+00:00
+[2024-10-08T04:13:35.609+0000] {standard_task_runner.py:55} INFO - Started process 30402 to run task
+[2024-10-08T04:13:35.611+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'extract_with_convertapi', 'manual__2024-10-08T04:13:27.138433+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmptk9j6vkt']
+[2024-10-08T04:13:35.613+0000] {standard_task_runner.py:83} INFO - Job 130: Subtask extract_with_convertapi
+[2024-10-08T04:13:35.715+0000] {task_command.py:376} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-08T04:13:27.138433+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-08T04:13:35.817+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=extract_with_convertapi
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-08T04:13:27.138433+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-08T04:13:27.138433+00:00
+[2024-10-08T04:13:37.452+0000] {logging_mixin.py:137} INFO - No images found in 021a5339-744f-42b7-bd9b-9368b3efda7a.pdf
+[2024-10-08T04:13:37.453+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-08T04:13:37.454+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.csv
+[2024-10-08T04:13:38.676+0000] {logging_mixin.py:137} INFO - No images found in 32f386b9-73ee-4455-b412-ddad508aa979.pdf
+[2024-10-08T04:13:38.676+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-08T04:13:38.678+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.csv
+[2024-10-08T04:13:40.106+0000] {logging_mixin.py:137} INFO - No images found in 4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf
+[2024-10-08T04:13:40.107+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-08T04:13:40.108+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.csv
+[2024-10-08T04:13:44.540+0000] {logging_mixin.py:137} INFO - No images found in 634fca59-03b2-4cdf-9ce4-0205df22f256.pdf
+[2024-10-08T04:13:44.542+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-08T04:13:44.542+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.csv
+[2024-10-08T04:13:46.101+0000] {logging_mixin.py:137} INFO - No images found in 680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf
+[2024-10-08T04:13:46.102+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-08T04:13:46.103+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.csv
+[2024-10-08T04:13:47.777+0000] {logging_mixin.py:137} INFO - No images found in 7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf
+[2024-10-08T04:13:47.778+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-08T04:13:47.779+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.csv
+[2024-10-08T04:13:54.990+0000] {logging_mixin.py:137} INFO - No images found in 8f697523-6988-4c4f-8d72-760a45681f68.pdf
+[2024-10-08T04:13:54.992+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-08T04:13:54.994+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.csv
+[2024-10-08T04:13:56.178+0000] {logging_mixin.py:137} INFO - No images found in b3654e47-4307-442c-a09c-945b33b913c6.pdf
+[2024-10-08T04:13:56.179+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-08T04:13:56.182+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.csv
+[2024-10-08T04:14:34.909+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json
+[2024-10-08T04:14:34.910+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf.csv
+[2024-10-08T04:14:34.922+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page1-image1.png
+[2024-10-08T04:14:34.923+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page1-image2.png
+[2024-10-08T04:14:34.924+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page13-image1.png
+[2024-10-08T04:14:34.925+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page14-image1.png
+[2024-10-08T04:14:34.927+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page14-image2.png
+[2024-10-08T04:14:34.928+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page14-image3.png
+[2024-10-08T04:14:34.929+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page14-image4.png
+[2024-10-08T04:14:34.930+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page16-image1.png
+[2024-10-08T04:14:34.932+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page18-image1.png
+[2024-10-08T04:14:34.933+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page25-image1.png
+[2024-10-08T04:14:34.934+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page26-image1.png
+[2024-10-08T04:14:34.938+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page26-image2.png
+[2024-10-08T04:14:34.939+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page26-image3.png
+[2024-10-08T04:14:34.941+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page26-image4.png
+[2024-10-08T04:14:34.943+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page36-image1.png
+[2024-10-08T04:14:34.945+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page38-image1.png
+[2024-10-08T04:14:34.947+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page39-image1.png
+[2024-10-08T04:14:34.948+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page39-image2.png
+[2024-10-08T04:14:34.950+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page40-image1.png
+[2024-10-08T04:14:34.951+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page42-image1.png
+[2024-10-08T04:14:34.952+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page51-image1.png
+[2024-10-08T04:14:34.953+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page52-image1.png
+[2024-10-08T04:14:34.954+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page52-image2.png
+[2024-10-08T04:14:34.955+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page52-image3.png
+[2024-10-08T04:14:34.957+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page52-image4.png
+[2024-10-08T04:14:34.958+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page54-image1.png
+[2024-10-08T04:14:34.959+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page54-image2.png
+[2024-10-08T04:14:34.960+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page56-image1.png
+[2024-10-08T04:14:34.962+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page56-image2.png
+[2024-10-08T04:14:34.963+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page56-image3.png
+[2024-10-08T04:14:34.964+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page56-image4.png
+[2024-10-08T04:14:34.965+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page57-image1.png
+[2024-10-08T04:14:34.965+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page57-image2.png
+[2024-10-08T04:14:34.966+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page63-image1.png
+[2024-10-08T04:14:34.968+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page63-image2.png
+[2024-10-08T04:14:34.969+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page63-image3.png
+[2024-10-08T04:14:34.970+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page64-image1.png
+[2024-10-08T04:14:34.971+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page65-image1.png
+[2024-10-08T04:14:34.972+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page66-image1.png
+[2024-10-08T04:14:34.973+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page66-image2.png
+[2024-10-08T04:14:34.974+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page68-image1.png
+[2024-10-08T04:14:34.975+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page73-image1.png
+[2024-10-08T04:14:34.976+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page74-image1.png
+[2024-10-08T04:14:34.978+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page74-image2.png
+[2024-10-08T04:14:34.979+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page74-image3.png
+[2024-10-08T04:14:34.980+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page74-image4.png
+[2024-10-08T04:14:34.981+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page74-image5.png
+[2024-10-08T04:14:34.984+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page77-image1.png
+[2024-10-08T04:14:34.985+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page78-image1.png
+[2024-10-08T04:14:34.987+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page79-image1.png
+[2024-10-08T04:14:34.988+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page81-image1.png
+[2024-10-08T04:14:34.991+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page81-image2.png
+[2024-10-08T04:14:34.992+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page82-image1.png
+[2024-10-08T04:14:34.994+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page84-image1.png
+[2024-10-08T04:14:34.995+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page95-image1.png
+[2024-10-08T04:14:34.997+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page95-image2.png
+[2024-10-08T04:14:34.998+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page97-image1.png
+[2024-10-08T04:14:34.999+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page98-image1.png
+[2024-10-08T04:14:35.000+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page103-image1.png
+[2024-10-08T04:14:35.002+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page104-image1.png
+[2024-10-08T04:14:35.003+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page104-image2.png
+[2024-10-08T04:14:35.005+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page104-image3.png
+[2024-10-08T04:14:35.006+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page104-image4.png
+[2024-10-08T04:14:35.007+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page106-image1.png
+[2024-10-08T04:14:35.008+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page109-image1.png
+[2024-10-08T04:14:35.010+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page121-image1.png
+[2024-10-08T04:14:35.013+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page124-image1.png
+[2024-10-08T04:14:35.016+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page127-image1.png
+[2024-10-08T04:14:35.018+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page130-image1.png
+[2024-10-08T04:14:35.020+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page132-image1.png
+[2024-10-08T04:14:35.023+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page134-image1.png
+[2024-10-08T04:14:35.024+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image1.png
+[2024-10-08T04:14:35.026+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image2.png
+[2024-10-08T04:14:35.027+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image3.png
+[2024-10-08T04:14:35.030+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image4.png
+[2024-10-08T04:14:35.032+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image5.png
+[2024-10-08T04:14:35.034+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image6.png
+[2024-10-08T04:14:35.035+0000] {logging_mixin.py:137} INFO - ConvertAPI image stored at /tmp/convertapi_be353748-74eb-4904-8f17-f180ce087f1a.pdf_be353748-74eb-4904-8f17-f180ce087f1a-page157-image7.png
+[2024-10-08T04:14:36.513+0000] {logging_mixin.py:137} INFO - No images found in c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf
+[2024-10-08T04:14:36.514+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-08T04:14:36.515+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.csv
+[2024-10-08T04:14:37.571+0000] {logging_mixin.py:137} INFO - No images found in 366e2f2b-8632-4ef2-81eb-bc3877489217.pdf
+[2024-10-08T04:14:37.572+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-08T04:14:37.574+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.csv
+[2024-10-08T04:14:38.831+0000] {logging_mixin.py:137} INFO - No images found in 67e8878b-5cef-4375-804e-e6291fdbe78a.pdf
+[2024-10-08T04:14:38.832+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-08T04:14:38.832+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.csv
+[2024-10-08T04:14:40.244+0000] {logging_mixin.py:137} INFO - No images found in e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf
+[2024-10-08T04:14:40.244+0000] {logging_mixin.py:137} INFO - ConvertAPI text stored at /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-08T04:14:40.245+0000] {logging_mixin.py:137} INFO - ConvertAPI tables stored at /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.csv
+[2024-10-08T04:14:40.298+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-08T04:14:40.315+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=extract_with_convertapi, execution_date=20241008T041327, start_date=20241008T041335, end_date=20241008T041440
+[2024-10-08T04:14:40.341+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-08T04:14:40.368+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

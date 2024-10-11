@@ -1,0 +1,63 @@
+[2024-10-07T03:15:40.008+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:15:32.438113+00:00 [queued]>
+[2024-10-07T03:15:40.022+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:15:32.438113+00:00 [queued]>
+[2024-10-07T03:15:40.022+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:15:40.023+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T03:15:40.024+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:15:40.042+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_pymupdf> on 2024-10-07 03:15:32.438113+00:00
+[2024-10-07T03:15:40.051+0000] {standard_task_runner.py:55} INFO - Started process 636 to run task
+[2024-10-07T03:15:40.054+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'extract_with_pymupdf', 'manual__2024-10-07T03:15:32.438113+00:00', '--job-id', '304', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpdsqjhfbm']
+[2024-10-07T03:15:40.055+0000] {standard_task_runner.py:83} INFO - Job 304: Subtask extract_with_pymupdf
+[2024-10-07T03:15:40.081+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T03:15:40.181+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_pymupdf manual__2024-10-07T03:15:32.438113+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T03:15:40.307+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=extract_with_pymupdf
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T03:15:32.438113+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T03:15:32.438113+00:00
+[2024-10-07T03:15:40.338+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 0: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.349+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 1: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.351+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 2: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.353+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T03:15:40.413+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 0: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.414+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T03:15:40.454+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 0: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.457+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 1: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.459+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 2: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.461+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 3: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.463+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 4: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.464+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 5: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.466+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 6: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.468+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 7: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.470+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 8: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.472+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 9: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.475+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 10: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.478+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 11: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.481+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 12: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.485+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 13: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.488+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 14: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.492+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 15: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.494+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 16: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.496+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 17: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.498+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 18: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.501+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 19: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.503+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 20: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.506+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 21: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.509+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 22: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.511+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 23: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.513+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 24: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.515+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 25: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.517+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 26: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.520+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 27: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.522+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 28: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.523+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 29: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.525+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T03:15:40.561+0000] {logging_mixin.py:137} INFO - Error extracting tables on page 0: 'Page' object has no attribute 'find_tables'
+[2024-10-07T03:15:40.562+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T03:15:40.593+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T03:15:40.617+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=extract_with_pymupdf, execution_date=20241007T031532, start_date=20241007T031540, end_date=20241007T031540
+[2024-10-07T03:15:40.669+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T03:15:40.713+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

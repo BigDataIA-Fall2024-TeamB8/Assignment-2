@@ -1,0 +1,62 @@
+[2024-10-07T16:54:56.350+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:54:45.088339+00:00 [queued]>
+[2024-10-07T16:54:56.359+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:54:45.088339+00:00 [queued]>
+[2024-10-07T16:54:56.360+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:54:56.360+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T16:54:56.361+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:54:56.373+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): embed_convertapi_pages> on 2024-10-07 16:54:45.088339+00:00
+[2024-10-07T16:54:56.377+0000] {standard_task_runner.py:55} INFO - Started process 971 to run task
+[2024-10-07T16:54:56.379+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'embed_convertapi_pages', 'manual__2024-10-07T16:54:45.088339+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmpu3khyttw']
+[2024-10-07T16:54:56.381+0000] {standard_task_runner.py:83} INFO - Job 13: Subtask embed_convertapi_pages
+[2024-10-07T16:54:56.476+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:54:45.088339+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T16:54:56.573+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=embed_convertapi_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T16:54:45.088339+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T16:54:45.088339+00:00
+[2024-10-07T16:55:03.092+0000] {logging_mixin.py:137} INFO - Created Pinecone index: convertapi-index
+[2024-10-07T16:55:04.395+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 0 in index convertapi-index
+[2024-10-07T16:55:04.636+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 1 in index convertapi-index
+[2024-10-07T16:55:04.836+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, page 2 in index convertapi-index
+[2024-10-07T16:55:05.542+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json, page 0 in index convertapi-index
+[2024-10-07T16:55:06.290+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json, page 0 in index convertapi-index
+[2024-10-07T16:55:07.322+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 0 in index convertapi-index
+[2024-10-07T16:55:07.913+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 1 in index convertapi-index
+[2024-10-07T16:55:08.316+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 2 in index convertapi-index
+[2024-10-07T16:55:09.167+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 3 in index convertapi-index
+[2024-10-07T16:55:09.799+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 4 in index convertapi-index
+[2024-10-07T16:55:10.118+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 5 in index convertapi-index
+[2024-10-07T16:55:10.422+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 6 in index convertapi-index
+[2024-10-07T16:55:11.387+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 7 in index convertapi-index
+[2024-10-07T16:55:12.351+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 8 in index convertapi-index
+[2024-10-07T16:55:12.554+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 9 in index convertapi-index
+[2024-10-07T16:55:13.435+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 10 in index convertapi-index
+[2024-10-07T16:55:13.854+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 11 in index convertapi-index
+[2024-10-07T16:55:14.336+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 12 in index convertapi-index
+[2024-10-07T16:55:14.676+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 13 in index convertapi-index
+[2024-10-07T16:55:14.969+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 14 in index convertapi-index
+[2024-10-07T16:55:15.155+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 15 in index convertapi-index
+[2024-10-07T16:55:15.414+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 16 in index convertapi-index
+[2024-10-07T16:55:15.692+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 17 in index convertapi-index
+[2024-10-07T16:55:16.078+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 18 in index convertapi-index
+[2024-10-07T16:55:16.444+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 19 in index convertapi-index
+[2024-10-07T16:55:16.797+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 20 in index convertapi-index
+[2024-10-07T16:55:17.602+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 21 in index convertapi-index
+[2024-10-07T16:55:18.077+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 22 in index convertapi-index
+[2024-10-07T16:55:18.510+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 23 in index convertapi-index
+[2024-10-07T16:55:19.163+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 24 in index convertapi-index
+[2024-10-07T16:55:19.465+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 25 in index convertapi-index
+[2024-10-07T16:55:19.921+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 26 in index convertapi-index
+[2024-10-07T16:55:20.583+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 27 in index convertapi-index
+[2024-10-07T16:55:21.509+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 28 in index convertapi-index
+[2024-10-07T16:55:21.805+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, page 29 in index convertapi-index
+[2024-10-07T16:55:22.596+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 0 in index convertapi-index
+[2024-10-07T16:55:23.006+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 1 in index convertapi-index
+[2024-10-07T16:55:23.197+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/pymupdf_example.pdf.json, page 2 in index convertapi-index
+[2024-10-07T16:55:23.198+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T16:55:23.217+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=embed_convertapi_pages, execution_date=20241007T165445, start_date=20241007T165456, end_date=20241007T165523
+[2024-10-07T16:55:23.254+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T16:55:23.281+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

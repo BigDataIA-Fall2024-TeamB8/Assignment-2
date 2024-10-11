@@ -1,0 +1,37 @@
+[2024-10-05T13:56:14.529+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T13:56:05.730194+00:00 [queued]>
+[2024-10-05T13:56:14.539+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T13:56:05.730194+00:00 [queued]>
+[2024-10-05T13:56:14.539+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T13:56:14.540+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-05T13:56:14.540+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T13:56:14.554+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_nanonets> on 2024-10-05 13:56:05.730194+00:00
+[2024-10-05T13:56:14.558+0000] {standard_task_runner.py:55} INFO - Started process 13444 to run task
+[2024-10-05T13:56:14.560+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_stages', 'extract_with_nanonets', 'manual__2024-10-05T13:56:05.730194+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/PDF-ETL.py', '--cfg-path', '/tmp/tmplq4vj773']
+[2024-10-05T13:56:14.563+0000] {standard_task_runner.py:83} INFO - Job 46: Subtask extract_with_nanonets
+[2024-10-05T13:56:14.588+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-05T13:56:14.662+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T13:56:05.730194+00:00 [running]> on host 93d8e18bedbe
+[2024-10-05T13:56:14.761+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_stages
+AIRFLOW_CTX_TASK_ID=extract_with_nanonets
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-05T13:56:05.730194+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-05T13:56:05.730194+00:00
+[2024-10-05T13:56:15.589+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:16.107+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:16.618+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:17.202+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:17.699+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:18.182+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:18.860+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:19.355+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:22.177+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:22.872+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:23.365+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:23.900+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:24.402+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T13:56:24.403+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-05T13:56:24.421+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_stages, task_id=extract_with_nanonets, execution_date=20241005T135605, start_date=20241005T135614, end_date=20241005T135624
+[2024-10-05T13:56:24.478+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-05T13:56:24.516+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

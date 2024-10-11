@@ -1,0 +1,109 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom_airflow:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: "${FERNET_KEY}"  # Loaded from .env
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"  # Loaded from .env
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"  # Loaded from .env
+      HUGGINGFACE_ACCESS_TOKEN: "${HUGGINGFACE_ACCESS_TOKEN}"  # Loaded from .env
+      CONVERTAPI_SECRET_KEY: "${CONVERTAPI_SECRET_KEY}"  # Loaded from .env
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"  # Loaded from .env
+      RDS_ENDPOINT: "${RDS_ENDPOINT}"  # Loaded from .env
+      RDS_USERNAME: "${RDS_USERNAME}"  # Loaded from .env
+      RDS_PASSWORD: "${RDS_PASSWORD}"  # Loaded from .env
+      RDS_DATABASE: "${RDS_DATABASE}"  # Loaded from .env
+      SECRET_KEY: "${SECRET_KEY}"  # Loaded from .env
+      ALGORITHM: "${ALGORITHM}"  # Loaded from .env
+      ACCESS_TOKEN_EXPIRE_MINUTES: "${ACCESS_TOKEN_EXPIRE_MINUTES}"  # Loaded from .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/requirements.txt
+    depends_on:
+      - postgres
+    command: >
+      bash -c "pip install -r /requirements.txt && airflow db upgrade && airflow webserver"
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom_airflow:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: "${FERNET_KEY}"  # Loaded from .env
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"  # Loaded from .env
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"  # Loaded from .env
+    depends_on:
+      - webserver
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/requirements.txt
+    command: >
+      bash -c "pip install -r /requirements.txt && airflow db upgrade && airflow scheduler"
+
+  flower:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom_airflow:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: "${FERNET_KEY}"  # Loaded from .env
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"  # Loaded from .env
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"  # Loaded from .env
+    depends_on:
+      - webserver
+    ports:
+      - "5555:5555"
+    command: >
+      bash -c "pip install -r /requirements.txt && airflow db upgrade && airflow celery flower"
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom_airflow:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: "${FERNET_KEY}"  # Loaded from .env
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"  # Loaded from .env
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"  # Loaded from .env
+    depends_on:
+      - webserver
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/requirements.txt
+    command: >
+      bash -c "pip install -r /requirements.txt && airflow db upgrade && airflow celery worker"

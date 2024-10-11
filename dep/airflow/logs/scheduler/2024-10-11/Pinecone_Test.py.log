@@ -1,0 +1,22 @@
+[2024-10-11T00:21:46.353+0000] {processor.py:154} INFO - Started process (PID=205) to work on /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:21:46.354+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/Pinecone_Test.py for tasks to queue
+[2024-10-11T00:21:46.355+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.355+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:21:46.688+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.687+0000] {credentials.py:1123} INFO - Found credentials in environment variables.
+[2024-10-11T00:21:46.729+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.729+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/airflow/.local/lib/python3.8/site-packages/pinecone_plugins'])
+[2024-10-11T00:21:46.730+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.730+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2024-10-11T00:21:46.736+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.736+0000] {installation.py:10} INFO - Installing plugin inference into Pinecone
+[2024-10-11T00:21:46.740+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pinecone_embedding_test_dag']) retrieved from /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:21:46.769+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.769+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:21:46.789+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.789+0000] {dag.py:3336} INFO - Setting next_dagrun for pinecone_embedding_test_dag to None, run_after=None
+[2024-10-11T00:21:46.811+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/Pinecone_Test.py took 0.460 seconds
+[2024-10-11T00:22:17.362+0000] {processor.py:154} INFO - Started process (PID=226) to work on /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:22:17.363+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/Pinecone_Test.py for tasks to queue
+[2024-10-11T00:22:17.364+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.364+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:22:17.683+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.683+0000] {credentials.py:1123} INFO - Found credentials in environment variables.
+[2024-10-11T00:22:17.723+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.723+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/airflow/.local/lib/python3.8/site-packages/pinecone_plugins'])
+[2024-10-11T00:22:17.724+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.724+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2024-10-11T00:22:17.730+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.730+0000] {installation.py:10} INFO - Installing plugin inference into Pinecone
+[2024-10-11T00:22:17.735+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pinecone_embedding_test_dag']) retrieved from /opt/airflow/dags/Pinecone_Test.py
+[2024-10-11T00:22:17.771+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.770+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:22:17.788+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.788+0000] {dag.py:3336} INFO - Setting next_dagrun for pinecone_embedding_test_dag to None, run_after=None
+[2024-10-11T00:22:17.807+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/Pinecone_Test.py took 0.447 seconds

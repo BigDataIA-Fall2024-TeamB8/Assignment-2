@@ -1,0 +1,26 @@
+[2024-10-06T06:22:56.366+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_pymupdf manual__2024-10-06T06:22:50.745236+00:00 [queued]>
+[2024-10-06T06:22:56.380+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_pymupdf manual__2024-10-06T06:22:50.745236+00:00 [queued]>
+[2024-10-06T06:22:56.381+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:22:56.381+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-06T06:22:56.381+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:22:56.404+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_pymupdf> on 2024-10-06 06:22:50.745236+00:00
+[2024-10-06T06:22:56.411+0000] {standard_task_runner.py:55} INFO - Started process 6916 to run task
+[2024-10-06T06:22:56.414+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'extract_with_pymupdf', 'manual__2024-10-06T06:22:50.745236+00:00', '--job-id', '262', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmph1opbv62']
+[2024-10-06T06:22:56.416+0000] {standard_task_runner.py:83} INFO - Job 262: Subtask extract_with_pymupdf
+[2024-10-06T06:22:56.449+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-06T06:22:56.561+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_pymupdf manual__2024-10-06T06:22:50.745236+00:00 [running]> on host c14bde59b801
+[2024-10-06T06:22:56.716+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=extract_with_pymupdf
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-06T06:22:50.745236+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-06T06:22:50.745236+00:00
+[2024-10-06T06:22:56.952+0000] {logging_mixin.py:137} INFO - Extracted text and images with PyMuPDF stored at /tmp/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-06T06:22:56.953+0000] {logging_mixin.py:137} INFO - Images saved in: /tmp/pymupdf_images_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf/
+[2024-10-06T06:22:57.021+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-06T06:22:57.043+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=extract_with_pymupdf, execution_date=20241006T062250, start_date=20241006T062256, end_date=20241006T062257
+[2024-10-06T06:22:57.108+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-06T06:22:57.168+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

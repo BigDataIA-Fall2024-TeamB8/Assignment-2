@@ -1,0 +1,37 @@
+[2024-10-04T16:07:11.399+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_pymupdf manual__2024-10-04T16:07:01.707653+00:00 [queued]>
+[2024-10-04T16:07:11.408+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_pymupdf manual__2024-10-04T16:07:01.707653+00:00 [queued]>
+[2024-10-04T16:07:11.408+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-04T16:07:11.409+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-04T16:07:11.409+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-04T16:07:11.422+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_pymupdf> on 2024-10-04 16:07:01.707653+00:00
+[2024-10-04T16:07:11.425+0000] {standard_task_runner.py:55} INFO - Started process 261 to run task
+[2024-10-04T16:07:11.427+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_stages', 'extract_with_pymupdf', 'manual__2024-10-04T16:07:01.707653+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/PDF-ETL.py', '--cfg-path', '/tmp/tmpz99gl9gb']
+[2024-10-04T16:07:11.429+0000] {standard_task_runner.py:83} INFO - Job 22: Subtask extract_with_pymupdf
+[2024-10-04T16:07:11.449+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-04T16:07:11.517+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_stages.extract_with_pymupdf manual__2024-10-04T16:07:01.707653+00:00 [running]> on host 93d8e18bedbe
+[2024-10-04T16:07:11.610+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_stages
+AIRFLOW_CTX_TASK_ID=extract_with_pymupdf
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-04T16:07:01.707653+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-04T16:07:01.707653+00:00
+[2024-10-04T16:07:11.735+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-04T16:07:11.768+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-04T16:07:11.803+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-04T16:07:11.844+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-04T16:07:11.873+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-04T16:07:11.902+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-04T16:07:11.969+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-04T16:07:12.001+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-04T16:07:12.256+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json
+[2024-10-04T16:07:12.291+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-04T16:07:12.319+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-04T16:07:12.345+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-04T16:07:12.376+0000] {logging_mixin.py:137} INFO - Extracted data with PyMuPDF stored at /tmp/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-04T16:07:12.401+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-04T16:07:12.418+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_stages, task_id=extract_with_pymupdf, execution_date=20241004T160701, start_date=20241004T160711, end_date=20241004T160712
+[2024-10-04T16:07:12.442+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-04T16:07:12.476+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

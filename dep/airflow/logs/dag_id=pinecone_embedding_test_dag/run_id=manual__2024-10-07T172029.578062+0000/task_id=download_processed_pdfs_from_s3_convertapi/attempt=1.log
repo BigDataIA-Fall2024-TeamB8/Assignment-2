@@ -1,0 +1,36 @@
+[2024-10-07T17:20:33.253+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3_convertapi manual__2024-10-07T17:20:29.578062+00:00 [queued]>
+[2024-10-07T17:20:33.263+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3_convertapi manual__2024-10-07T17:20:29.578062+00:00 [queued]>
+[2024-10-07T17:20:33.263+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T17:20:33.264+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T17:20:33.264+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T17:20:33.275+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): download_processed_pdfs_from_s3_convertapi> on 2024-10-07 17:20:29.578062+00:00
+[2024-10-07T17:20:33.280+0000] {standard_task_runner.py:55} INFO - Started process 2851 to run task
+[2024-10-07T17:20:33.283+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'download_processed_pdfs_from_s3_convertapi', 'manual__2024-10-07T17:20:29.578062+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmpamvot85x']
+[2024-10-07T17:20:33.285+0000] {standard_task_runner.py:83} INFO - Job 65: Subtask download_processed_pdfs_from_s3_convertapi
+[2024-10-07T17:20:33.383+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.download_processed_pdfs_from_s3_convertapi manual__2024-10-07T17:20:29.578062+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T17:20:33.479+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=download_processed_pdfs_from_s3_convertapi
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T17:20:29.578062+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T17:20:29.578062+00:00
+[2024-10-07T17:20:33.714+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json to /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T17:20:33.856+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json to /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json
+[2024-10-07T17:20:33.965+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json to /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T17:20:34.063+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json to /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json
+[2024-10-07T17:20:34.167+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json to /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json
+[2024-10-07T17:20:34.275+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json to /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json
+[2024-10-07T17:20:34.377+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json to /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json
+[2024-10-07T17:20:34.472+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json to /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json
+[2024-10-07T17:20:34.706+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json to /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json
+[2024-10-07T17:20:34.822+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json to /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json
+[2024-10-07T17:20:34.950+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json to /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json
+[2024-10-07T17:20:35.192+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json to /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json
+[2024-10-07T17:20:35.287+0000] {logging_mixin.py:137} INFO - Downloaded convertapi/convertapi_example.pdf.json to /tmp/convertapi_example.pdf.json
+[2024-10-07T17:20:35.314+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T17:20:35.331+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=download_processed_pdfs_from_s3_convertapi, execution_date=20241007T172029, start_date=20241007T172033, end_date=20241007T172035
+[2024-10-07T17:20:35.381+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T17:20:35.412+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

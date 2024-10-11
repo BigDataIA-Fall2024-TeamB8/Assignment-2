@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi  # Specify the correct Dockerfile for FastAPI
+    container_name: fastapi_container
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    env_file:  # Load environment variables from .env file
+      - .env
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit  # Specify the correct Dockerfile for Streamlit
+    container_name: streamlit_container
+    ports:
+      - "8501:8501"
+    networks:
+      - app-network
+    env_file:  # Load environment variables from .env file
+      - .env
+
+networks:
+  app-network:
+    driver: bridge

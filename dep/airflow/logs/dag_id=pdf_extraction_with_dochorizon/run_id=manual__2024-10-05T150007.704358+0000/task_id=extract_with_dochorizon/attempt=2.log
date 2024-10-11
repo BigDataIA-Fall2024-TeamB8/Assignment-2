@@ -1,0 +1,80 @@
+[2024-10-05T15:05:13.875+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_dochorizon.extract_with_dochorizon manual__2024-10-05T15:00:07.704358+00:00 [queued]>
+[2024-10-05T15:05:13.884+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_dochorizon.extract_with_dochorizon manual__2024-10-05T15:00:07.704358+00:00 [queued]>
+[2024-10-05T15:05:13.885+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T15:05:13.885+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 2
+[2024-10-05T15:05:13.885+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T15:05:13.899+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_dochorizon> on 2024-10-05 15:00:07.704358+00:00
+[2024-10-05T15:05:13.904+0000] {standard_task_runner.py:55} INFO - Started process 14949 to run task
+[2024-10-05T15:05:13.906+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_dochorizon', 'extract_with_dochorizon', 'manual__2024-10-05T15:00:07.704358+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/PDF-Klippa.py', '--cfg-path', '/tmp/tmpvx182fn2']
+[2024-10-05T15:05:13.907+0000] {standard_task_runner.py:83} INFO - Job 135: Subtask extract_with_dochorizon
+[2024-10-05T15:05:13.931+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-05T15:05:14.003+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_dochorizon.extract_with_dochorizon manual__2024-10-05T15:00:07.704358+00:00 [running]> on host 93d8e18bedbe
+[2024-10-05T15:05:14.099+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_dochorizon
+AIRFLOW_CTX_TASK_ID=extract_with_dochorizon
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-05T15:00:07.704358+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-05T15:00:07.704358+00:00
+[2024-10-05T15:06:38.585+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f4c3c6baf10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.dochorizon.com', port=443): Max retries exceeded with url: /document_capturing/v1/generic (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4c3c6baf10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/PDF-Klippa.py", line 98, in extract_with_dochorizon
+    response = requests.post(dochorizon_url, headers=headers, json=payload)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.dochorizon.com', port=443): Max retries exceeded with url: /document_capturing/v1/generic (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4c3c6baf10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-05T15:06:38.605+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=pdf_extraction_with_dochorizon, task_id=extract_with_dochorizon, execution_date=20241005T150007, start_date=20241005T150513, end_date=20241005T150638
+[2024-10-05T15:06:38.638+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 135 for task extract_with_dochorizon (HTTPSConnectionPool(host='api.dochorizon.com', port=443): Max retries exceeded with url: /document_capturing/v1/generic (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4c3c6baf10>: Failed to establish a new connection: [Errno 111] Connection refused')); 14949)
+[2024-10-05T15:06:38.678+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-05T15:06:38.706+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,16 @@
+[2024-10-11T00:21:46.838+0000] {processor.py:154} INFO - Started process (PID=211) to work on /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:21:46.839+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/PDF-Klippa.py for tasks to queue
+[2024-10-11T00:21:46.839+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.839+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:21:46.908+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.908+0000] {credentials.py:1123} INFO - Found credentials in environment variables.
+[2024-10-11T00:21:47.042+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pdf_extraction_with_dochorizon']) retrieved from /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:21:47.070+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:47.070+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:21:47.093+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:47.092+0000] {dag.py:3336} INFO - Setting next_dagrun for pdf_extraction_with_dochorizon to None, run_after=None
+[2024-10-11T00:21:47.112+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/PDF-Klippa.py took 0.276 seconds
+[2024-10-11T00:22:17.830+0000] {processor.py:154} INFO - Started process (PID=232) to work on /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:22:17.831+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/PDF-Klippa.py for tasks to queue
+[2024-10-11T00:22:17.832+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.832+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:22:17.902+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.902+0000] {credentials.py:1123} INFO - Found credentials in environment variables.
+[2024-10-11T00:22:18.026+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pdf_extraction_with_dochorizon']) retrieved from /opt/airflow/dags/PDF-Klippa.py
+[2024-10-11T00:22:18.058+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:18.058+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:22:18.078+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:18.078+0000] {dag.py:3336} INFO - Setting next_dagrun for pdf_extraction_with_dochorizon to None, run_after=None
+[2024-10-11T00:22:18.097+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/PDF-Klippa.py took 0.269 seconds

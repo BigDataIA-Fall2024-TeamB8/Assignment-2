@@ -1,0 +1,24 @@
+[2024-10-07T22:45:35.215+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.list_pdfs_in_s3 manual__2024-10-07T22:45:33.474598+00:00 [queued]>
+[2024-10-07T22:45:35.225+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.list_pdfs_in_s3 manual__2024-10-07T22:45:33.474598+00:00 [queued]>
+[2024-10-07T22:45:35.226+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:45:35.226+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T22:45:35.226+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T22:45:35.238+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): list_pdfs_in_s3> on 2024-10-07 22:45:33.474598+00:00
+[2024-10-07T22:45:35.244+0000] {standard_task_runner.py:55} INFO - Started process 16725 to run task
+[2024-10-07T22:45:35.246+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'list_pdfs_in_s3', 'manual__2024-10-07T22:45:33.474598+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpuhyj1hmm']
+[2024-10-07T22:45:35.248+0000] {standard_task_runner.py:83} INFO - Job 113: Subtask list_pdfs_in_s3
+[2024-10-07T22:45:35.341+0000] {task_command.py:376} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.list_pdfs_in_s3 manual__2024-10-07T22:45:33.474598+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T22:45:35.436+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=list_pdfs_in_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T22:45:33.474598+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T22:45:33.474598+00:00
+[2024-10-07T22:45:35.649+0000] {logging_mixin.py:137} INFO - PDF files found in gaia-pdf-unprocessed: ['gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf', 'gaia/2023/test/example.pdf', 'gaia/2023/validation/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf']
+[2024-10-07T22:45:35.677+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T22:45:35.695+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=list_pdfs_in_s3, execution_date=20241007T224533, start_date=20241007T224535, end_date=20241007T224535
+[2024-10-07T22:45:35.740+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T22:45:35.772+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

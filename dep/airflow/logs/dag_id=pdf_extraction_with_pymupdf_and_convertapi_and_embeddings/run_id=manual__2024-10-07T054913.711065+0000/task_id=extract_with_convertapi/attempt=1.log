@@ -1,0 +1,29 @@
+[2024-10-07T05:49:22.925+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_convertapi manual__2024-10-07T05:49:13.711065+00:00 [queued]>
+[2024-10-07T05:49:22.938+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_convertapi manual__2024-10-07T05:49:13.711065+00:00 [queued]>
+[2024-10-07T05:49:22.938+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T05:49:22.939+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T05:49:22.939+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T05:49:22.959+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_convertapi> on 2024-10-07 05:49:13.711065+00:00
+[2024-10-07T05:49:22.964+0000] {standard_task_runner.py:55} INFO - Started process 5512 to run task
+[2024-10-07T05:49:22.967+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'extract_with_convertapi', 'manual__2024-10-07T05:49:13.711065+00:00', '--job-id', '379', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpjydyynf2']
+[2024-10-07T05:49:22.968+0000] {standard_task_runner.py:83} INFO - Job 379: Subtask extract_with_convertapi
+[2024-10-07T05:49:22.998+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T05:49:23.116+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.extract_with_convertapi manual__2024-10-07T05:49:13.711065+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T05:49:23.256+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=extract_with_convertapi
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T05:49:13.711065+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T05:49:13.711065+00:00
+[2024-10-07T05:49:24.674+0000] {logging_mixin.py:137} INFO - No images found in 021a5339-744f-42b7-bd9b-9368b3efda7a.pdf
+[2024-10-07T05:49:24.676+0000] {logging_mixin.py:137} INFO - Extracted data with ConvertAPI stored at /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json
+[2024-10-07T05:49:28.214+0000] {logging_mixin.py:137} INFO - Extracted data with ConvertAPI stored at /tmp/convertapi_example.pdf.json
+[2024-10-07T05:49:29.341+0000] {logging_mixin.py:137} INFO - No images found in 366e2f2b-8632-4ef2-81eb-bc3877489217.pdf
+[2024-10-07T05:49:29.344+0000] {logging_mixin.py:137} INFO - Extracted data with ConvertAPI stored at /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json
+[2024-10-07T05:49:29.378+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T05:49:29.401+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=extract_with_convertapi, execution_date=20241007T054913, start_date=20241007T054922, end_date=20241007T054929
+[2024-10-07T05:49:29.447+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T05:49:29.496+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

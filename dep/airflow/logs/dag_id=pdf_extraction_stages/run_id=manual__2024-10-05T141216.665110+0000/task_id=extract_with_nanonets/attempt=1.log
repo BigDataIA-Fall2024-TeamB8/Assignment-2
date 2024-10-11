@@ -1,0 +1,50 @@
+[2024-10-05T14:12:25.392+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T14:12:16.665110+00:00 [queued]>
+[2024-10-05T14:12:25.407+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T14:12:16.665110+00:00 [queued]>
+[2024-10-05T14:12:25.408+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T14:12:25.408+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-05T14:12:25.409+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-05T14:12:25.433+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_nanonets> on 2024-10-05 14:12:16.665110+00:00
+[2024-10-05T14:12:25.437+0000] {standard_task_runner.py:55} INFO - Started process 13987 to run task
+[2024-10-05T14:12:25.440+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_stages', 'extract_with_nanonets', 'manual__2024-10-05T14:12:16.665110+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/PDF-ETL.py', '--cfg-path', '/tmp/tmpb_36x_00']
+[2024-10-05T14:12:25.442+0000] {standard_task_runner.py:83} INFO - Job 93: Subtask extract_with_nanonets
+[2024-10-05T14:12:25.468+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-05T14:12:25.551+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_stages.extract_with_nanonets manual__2024-10-05T14:12:16.665110+00:00 [running]> on host 93d8e18bedbe
+[2024-10-05T14:12:25.646+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_stages
+AIRFLOW_CTX_TASK_ID=extract_with_nanonets
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-05T14:12:16.665110+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-05T14:12:16.665110+00:00
+[2024-10-05T14:12:26.432+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:26.433+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:26.919+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:26.920+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:27.409+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:27.411+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:27.984+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:27.985+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:28.477+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:28.478+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:28.969+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:28.970+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:29.655+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:29.655+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:30.151+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:30.151+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:31.907+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:31.908+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:32.434+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:32.435+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:32.930+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:32.931+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:33.418+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:33.419+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:33.928+0000] {logging_mixin.py:137} INFO - Failed to extract with Nanonets API. Status Code: 401
+[2024-10-05T14:12:33.929+0000] {logging_mixin.py:137} INFO - Response Text: {"message":"Unauthorized","code":401,"errors":[{"reason":"Api Key Missing in request","message":"Add api key in request header as explained here: https://app.nanonets.com/documentation#authentication"}]}
+[2024-10-05T14:12:33.929+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-05T14:12:33.949+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_stages, task_id=extract_with_nanonets, execution_date=20241005T141216, start_date=20241005T141225, end_date=20241005T141233
+[2024-10-05T14:12:33.994+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-05T14:12:34.025+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+[2024-10-11T00:21:46.025+0000] {processor.py:154} INFO - Started process (PID=194) to work on /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:21:46.026+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/ETL-ConvertAPI.py for tasks to queue
+[2024-10-11T00:21:46.027+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.027+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:21:46.264+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pdf_extraction_with_pymupdf_and_convertapi']) retrieved from /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:21:46.289+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.289+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:21:46.310+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:21:46.310+0000] {dag.py:3336} INFO - Setting next_dagrun for pdf_extraction_with_pymupdf_and_convertapi to None, run_after=None
+[2024-10-11T00:21:46.330+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/ETL-ConvertAPI.py took 0.307 seconds
+[2024-10-11T00:22:17.050+0000] {processor.py:154} INFO - Started process (PID=216) to work on /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:22:17.050+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/ETL-ConvertAPI.py for tasks to queue
+[2024-10-11T00:22:17.051+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.051+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:22:17.263+0000] {processor.py:766} INFO - DAG(s) dict_keys(['pdf_extraction_with_pymupdf_and_convertapi']) retrieved from /opt/airflow/dags/ETL-ConvertAPI.py
+[2024-10-11T00:22:17.299+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.299+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2024-10-11T00:22:17.319+0000] {logging_mixin.py:137} INFO - [2024-10-11T00:22:17.319+0000] {dag.py:3336} INFO - Setting next_dagrun for pdf_extraction_with_pymupdf_and_convertapi to None, run_after=None
+[2024-10-11T00:22:17.341+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/ETL-ConvertAPI.py took 0.294 seconds

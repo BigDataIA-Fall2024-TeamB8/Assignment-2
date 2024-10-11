@@ -1,0 +1,19 @@
+# Apache Airflow dependencies (core and extras)
+apache-airflow==2.4.3
+apache-airflow-providers-amazon==6.0.0  # For AWS/S3 integrations
+apache-airflow-providers-http==3.0.0  # If HTTP operators are needed
+
+# PyMuPDF for PDF processing
+PyMuPDF==1.19.6
+
+# Pinecone vector database client
+pinecone-client==5.0.0
+
+# OpenAI API for embeddings
+openai==0.27.0
+
+# AWS SDK for Python (boto3) to interact with S3
+boto3==1.26.71
+
+# Requests for handling API calls (e.g., to ConvertAPI)
+requests==2.28.2

@@ -1,0 +1,231 @@
+[2024-10-07T16:47:14.300+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:47:02.902574+00:00 [queued]>
+[2024-10-07T16:47:14.308+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:47:02.902574+00:00 [queued]>
+[2024-10-07T16:47:14.308+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:47:14.309+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T16:47:14.309+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T16:47:14.323+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): embed_convertapi_pages> on 2024-10-07 16:47:02.902574+00:00
+[2024-10-07T16:47:14.327+0000] {standard_task_runner.py:55} INFO - Started process 401 to run task
+[2024-10-07T16:47:14.330+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'embed_convertapi_pages', 'manual__2024-10-07T16:47:02.902574+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmpdpcrykgk']
+[2024-10-07T16:47:14.334+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask embed_convertapi_pages
+[2024-10-07T16:47:14.432+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T16:47:02.902574+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T16:47:14.537+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=embed_convertapi_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T16:47:02.902574+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T16:47:02.902574+00:00
+[2024-10-07T16:47:14.973+0000] {logging_mixin.py:137} INFO - Error creating Pinecone index: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '0f679335ca2fa7f673a4f8f0af92e57f', 'Date': 'Mon, 07 Oct 2024 16:47:14 GMT', 'Server': 'Google Frontend', 'Content-Length': '200', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"INVALID_ARGUMENT","message":"Bad request: Your free plan does not support indexes in the us-west-2 region of aws. To create indexes in this region, upgrade your plan."},"status":400}
+[2024-10-07T16:47:15.164+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'c5e3ab0cf8ea571d9f97067b22e38c2f', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.275+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5b4c2cc23048c0e490e916ce2da43650', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.385+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '1755b86b64e42209aa379619b43959f7', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.495+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '08c14f23c71dd5ada8f08300bc315f2e', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.609+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '43120dde697e9745f456e584c5521571', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.726+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '9f909b883788ff3119b7cf4d1bdccb78', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.834+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '871ef41b1046e1abd14dcab68975431c', 'Date': 'Mon, 07 Oct 2024 16:47:15 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:15.997+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '052296f19d3c24799dcdaa5d80a72e05', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.125+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'b788c935031adb83ab94dd105c5ee10a', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.286+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '104f0b4ed045a481d537c341e07f784a', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.387+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5c8f362634a36c1e7510d022cc84e347', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.490+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '66291155392fb15255ffcf4c61efca7e', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.584+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_example.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '413a8d705187ee4e38ca1f398d51ddbf', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.665+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '7cb23be274ecace00afb115e11bf8735', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.770+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '596e619298a03f9b0eac97022221c578', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:16.927+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'b278f20c48d67e2aee4565f8f5175d09', 'Date': 'Mon, 07 Oct 2024 16:47:16 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.030+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '8a46bef4b8c5b156f7d92fc41d50837d', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.129+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '706e569391bc5918b6d5a514784b0e6f', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.222+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '36f741a8e4a37ae7b6adf76988902cc9', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.315+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '1f2a0fcecfcb6f6a055af6fe82415a7a', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.423+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '3ed3d7a33a7500e37c890d6988f41676', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.509+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'cc08aaa9dcdfb504731ec9ed44081136', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.599+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'd48738a40fbadc0ed56a3118b2902c4a', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.695+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e6ad6584ae5cf1df5c97044dd264f20b', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.863+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_generic_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '6793062a02756de8939c9d79fe88c5d3', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:17.953+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '102600272a17a0e64bb3ca26b06f7889', 'Date': 'Mon, 07 Oct 2024 16:47:17 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.084+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'b7dcb8b33249d7b66d0597d30224569a', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.190+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5d89ffbe98300445b03600302328c5f2', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.283+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'ccc65adcc41b434fe4a7670d80c33114', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.513+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e592d57a90ce26893d37dbd6ca1c5364', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.638+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '95d6b9525c7d51a8bce7f2f54df241f5', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.758+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '76b20e351b20ae4069019a0a14110777', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.858+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '125d59565792e735cfa1979d69fb31aa', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:18.951+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'ddb14a659e0958663e0417566eb125d3', 'Date': 'Mon, 07 Oct 2024 16:47:18 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.077+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '359a3c06ef444a1024b9ed61d9bc40f4', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.218+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '05f9ffdfc41586fc17d72441e8613d7c', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.316+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/dochorizon_info_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '5b6ef2782ad43913505cdda57a5cdae3', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.410+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '3adddb3f48c4dae488f1b19f30d67850', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.499+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '0dac22e9aebe1b89feb1c365f4747768', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.626+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '30edb13eab6f1b9787fcb5821727cecb', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.703+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '3203a0ee40a8be6d3387b08f155aae49', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.786+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '37969b653108573184d6d9bcbaf18820', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.880+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '99b6bd53cf316aab589a77adfd05246b', 'Date': 'Mon, 07 Oct 2024 16:47:19 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:19.980+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'cf5414dbb54fdb9296f80ac0019dec0c', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.093+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '38ed1667ae9bdd9745d5a2bef21f7581', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.188+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '250b7b1c69a0d197aedc69f4e68bb8ea', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.313+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e659499c5539315370c055335d60cc30', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.473+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_be353748-74eb-4904-8f17-f180ce087f1a.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '60c145e29fc738862da83428c555f6e5', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.604+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'b67eaf4fdf28317c7299224382585b91', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.689+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '0517567784d681e88879abf5dfd7e155', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.896+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/pymupdf_example.pdf.json: (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': '90f8259b73214e24c32bee366dd17b42', 'Date': 'Mon, 07 Oct 2024 16:47:20 GMT', 'Server': 'Google Frontend', 'Content-Length': '91', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"NOT_FOUND","message":"Resource convertapi-index not found"},"status":404}
+[2024-10-07T16:47:20.896+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T16:47:20.917+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=embed_convertapi_pages, execution_date=20241007T164702, start_date=20241007T164714, end_date=20241007T164720
+[2024-10-07T16:47:20.976+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T16:47:21.003+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,35 @@
+[2024-10-06T06:26:56.964+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:26:49.101615+00:00 [queued]>
+[2024-10-06T06:26:56.979+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:26:49.101615+00:00 [queued]>
+[2024-10-06T06:26:56.980+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:26:56.980+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2024-10-06T06:26:56.981+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-06T06:26:56.996+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_with_convertapi> on 2024-10-06 06:26:49.101615+00:00
+[2024-10-06T06:26:57.002+0000] {standard_task_runner.py:55} INFO - Started process 7075 to run task
+[2024-10-06T06:26:57.004+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi', 'extract_with_convertapi', 'manual__2024-10-06T06:26:49.101615+00:00', '--job-id', '267', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmpzzw1phyd']
+[2024-10-06T06:26:57.006+0000] {standard_task_runner.py:83} INFO - Job 267: Subtask extract_with_convertapi
+[2024-10-06T06:26:57.028+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-06T06:26:57.112+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi.extract_with_convertapi manual__2024-10-06T06:26:49.101615+00:00 [running]> on host c14bde59b801
+[2024-10-06T06:26:57.345+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi
+AIRFLOW_CTX_TASK_ID=extract_with_convertapi
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-06T06:26:49.101615+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-06T06:26:49.101615+00:00
+[2024-10-06T06:26:57.346+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 116, in extract_with_convertapi
+    text_result = extract_text()
+  File "/opt/airflow/dags/ETL-ConvertAPI.py", line 80, in extract_text
+    files = {'File': open(pdf_path, 'rb')}
+FileNotFoundError: [Errno 2] No such file or directory: 'None'
+[2024-10-06T06:26:57.366+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=pdf_extraction_with_pymupdf_and_convertapi, task_id=extract_with_convertapi, execution_date=20241006T062649, start_date=20241006T062656, end_date=20241006T062657
+[2024-10-06T06:26:57.382+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 267 for task extract_with_convertapi ([Errno 2] No such file or directory: 'None'; 7075)
+[2024-10-06T06:26:57.417+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-06T06:26:57.450+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

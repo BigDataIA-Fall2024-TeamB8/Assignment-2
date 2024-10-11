@@ -1,0 +1,56 @@
+[2024-10-07T17:26:05.064+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T17:25:58.123644+00:00 [queued]>
+[2024-10-07T17:26:05.072+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T17:25:58.123644+00:00 [queued]>
+[2024-10-07T17:26:05.072+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T17:26:05.073+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 3
+[2024-10-07T17:26:05.073+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T17:26:05.086+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): embed_convertapi_pages> on 2024-10-07 17:25:58.123644+00:00
+[2024-10-07T17:26:05.090+0000] {standard_task_runner.py:55} INFO - Started process 3303 to run task
+[2024-10-07T17:26:05.092+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pinecone_embedding_test_dag', 'embed_convertapi_pages', 'manual__2024-10-07T17:25:58.123644+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/Pinecone_Test.py', '--cfg-path', '/tmp/tmpw4dog2hh']
+[2024-10-07T17:26:05.094+0000] {standard_task_runner.py:83} INFO - Job 79: Subtask embed_convertapi_pages
+[2024-10-07T17:26:05.186+0000] {task_command.py:376} INFO - Running <TaskInstance: pinecone_embedding_test_dag.embed_convertapi_pages manual__2024-10-07T17:25:58.123644+00:00 [running]> on host 65f7b1aa1c1b
+[2024-10-07T17:26:05.276+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pinecone_embedding_test_dag
+AIRFLOW_CTX_TASK_ID=embed_convertapi_pages
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T17:25:58.123644+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T17:25:58.123644+00:00
+[2024-10-07T17:26:06.055+0000] {logging_mixin.py:137} INFO - Error creating Pinecone index: (409)
+Reason: Conflict
+HTTP response headers: HTTPHeaderDict({'content-type': 'text/plain; charset=utf-8', 'access-control-allow-origin': '*', 'vary': 'origin,access-control-request-method,access-control-request-headers', 'access-control-expose-headers': '*', 'x-pinecone-api-version': '2024-07', 'X-Cloud-Trace-Context': 'e5b0bee990f40c6786db1eb90667fdc2', 'Date': 'Mon, 07 Oct 2024 17:26:06 GMT', 'Server': 'Google Frontend', 'Content-Length': '85', 'Via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'})
+HTTP response body: {"error":{"code":"ALREADY_EXISTS","message":"Resource  already exists"},"status":409}
+[2024-10-07T17:26:07.135+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, content index 0, chunk 0 in index convertapi-index
+[2024-10-07T17:26:07.626+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_021a5339-744f-42b7-bd9b-9368b3efda7a.pdf.json, content index 1, chunk 0 in index convertapi-index
+[2024-10-07T17:26:07.628+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_32f386b9-73ee-4455-b412-ddad508aa979.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:08.300+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json, content index 0, chunk 0 in index convertapi-index
+[2024-10-07T17:26:08.563+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_366e2f2b-8632-4ef2-81eb-bc3877489217.pdf.json, content index 1, chunk 0 in index convertapi-index
+[2024-10-07T17:26:08.565+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_4044eab7-1282-42bd-a559-3bf3a4d5858e.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:09.608+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json, content index 0, chunk 0 in index convertapi-index
+[2024-10-07T17:26:09.890+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_634fca59-03b2-4cdf-9ce4-0205df22f256.pdf.json, content index 1, chunk 0 in index convertapi-index
+[2024-10-07T17:26:09.892+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_67e8878b-5cef-4375-804e-e6291fdbe78a.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:09.893+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_680d7d77-c0c7-49c8-88fd-f8ec623645e9.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:09.894+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_7c215d46-91c7-424e-9f22-37d43ab73ea6.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:10.217+0000] {util.py:67} INFO - error_code=None error_message="This model's maximum context length is 8192 tokens, however you requested 11481 tokens (11481 in your prompt; 0 for the completion). Please reduce your prompt; or completion length." error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+[2024-10-07T17:26:10.218+0000] {logging_mixin.py:137} INFO - Failed to process content index 0 in file /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json: This model's maximum context length is 8192 tokens, however you requested 11481 tokens (11481 in your prompt; 0 for the completion). Please reduce your prompt; or completion length.
+[2024-10-07T17:26:10.819+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 1, chunk 0 in index convertapi-index
+[2024-10-07T17:26:11.203+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 2, chunk 0 in index convertapi-index
+[2024-10-07T17:26:12.169+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 3, chunk 0 in index convertapi-index
+[2024-10-07T17:26:12.349+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 4, chunk 0 in index convertapi-index
+[2024-10-07T17:26:13.212+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 5, chunk 0 in index convertapi-index
+[2024-10-07T17:26:13.681+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 6, chunk 0 in index convertapi-index
+[2024-10-07T17:26:14.009+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_8f697523-6988-4c4f-8d72-760a45681f68.pdf.json, content index 7, chunk 0 in index convertapi-index
+[2024-10-07T17:26:14.011+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_b3654e47-4307-442c-a09c-945b33b913c6.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:14.012+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_c4456885-2f03-436f-8fe9-0b4ca6822cdb.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:14.013+0000] {logging_mixin.py:137} INFO - Failed to process /tmp/convertapi_e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf.json: 'str' object has no attribute 'get'
+[2024-10-07T17:26:14.634+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_example.pdf.json, content index 0, chunk 0 in index convertapi-index
+[2024-10-07T17:26:15.008+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_example.pdf.json, content index 1, chunk 0 in index convertapi-index
+[2024-10-07T17:26:15.583+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_example.pdf.json, content index 2, chunk 0 in index convertapi-index
+[2024-10-07T17:26:15.787+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_example.pdf.json, content index 3, chunk 0 in index convertapi-index
+[2024-10-07T17:26:16.018+0000] {logging_mixin.py:137} INFO - Stored embedding for /tmp/convertapi_example.pdf.json, content index 4, chunk 0 in index convertapi-index
+[2024-10-07T17:26:16.018+0000] {logging_mixin.py:137} INFO - Skipping content index 5 due to decoding error: 'utf-8' codec can't decode byte 0xd0 in position 4: invalid continuation byte
+[2024-10-07T17:26:16.019+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T17:26:16.037+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=pinecone_embedding_test_dag, task_id=embed_convertapi_pages, execution_date=20241007T172558, start_date=20241007T172605, end_date=20241007T172616
+[2024-10-07T17:26:16.081+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T17:26:16.107+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

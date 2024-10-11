@@ -1,0 +1,27 @@
+[2024-10-07T03:39:32.463+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.download_pdfs manual__2024-10-07T03:39:28.142677+00:00 [queued]>
+[2024-10-07T03:39:32.475+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.download_pdfs manual__2024-10-07T03:39:28.142677+00:00 [queued]>
+[2024-10-07T03:39:32.476+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:39:32.477+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 3
+[2024-10-07T03:39:32.477+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07T03:39:32.494+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): download_pdfs> on 2024-10-07 03:39:28.142677+00:00
+[2024-10-07T03:39:32.500+0000] {standard_task_runner.py:55} INFO - Started process 1498 to run task
+[2024-10-07T03:39:32.503+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pdf_extraction_with_pymupdf_and_convertapi_and_embeddings', 'download_pdfs', 'manual__2024-10-07T03:39:28.142677+00:00', '--job-id', '333', '--raw', '--subdir', 'DAGS_FOLDER/ETL-ConvertAPI.py', '--cfg-path', '/tmp/tmp6767dmjs']
+[2024-10-07T03:39:32.503+0000] {standard_task_runner.py:83} INFO - Job 333: Subtask download_pdfs
+[2024-10-07T03:39:32.529+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-07T03:39:32.629+0000] {task_command.py:389} INFO - Running <TaskInstance: pdf_extraction_with_pymupdf_and_convertapi_and_embeddings.download_pdfs manual__2024-10-07T03:39:28.142677+00:00 [running]> on host 1350c74cd1fb
+[2024-10-07T03:39:32.757+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings
+AIRFLOW_CTX_TASK_ID=download_pdfs
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T03:39:28.142677+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T03:39:28.142677+00:00
+[2024-10-07T03:39:33.098+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/test/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf to /tmp/021a5339-744f-42b7-bd9b-9368b3efda7a.pdf
+[2024-10-07T03:39:33.637+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/test/example.pdf to /tmp/example.pdf
+[2024-10-07T03:39:33.811+0000] {logging_mixin.py:137} INFO - Downloaded gaia/2023/validation/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf to /tmp/366e2f2b-8632-4ef2-81eb-bc3877489217.pdf
+[2024-10-07T03:39:33.847+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-07T03:39:33.868+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=pdf_extraction_with_pymupdf_and_convertapi_and_embeddings, task_id=download_pdfs, execution_date=20241007T033928, start_date=20241007T033932, end_date=20241007T033933
+[2024-10-07T03:39:33.921+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-07T03:39:33.967+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
