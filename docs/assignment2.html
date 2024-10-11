@@ -1,0 +1,368 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id=""
+                  title=""
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Assignment 2" duration="0">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Automating Text Extraction and Client - Facing Application Development" duration="0">
+        <p><strong>Team B-8</strong></p>
+<h2 is-upgraded><strong>Team member 1 - Sathvik Vadavatha</strong></h2>
+<h2 is-upgraded><strong>Team member 2 - Rutuja Patil</strong></h2>
+<h2 is-upgraded><strong>Team member 3 - Sakshi Aade</strong></h2>
+<p><strong>Application links:</strong></p>
+<p>Airflow: <a href="http://54.164.101.19:8080/home" target="_blank">http://54.164.101.19:8080/home</a></p>
+<p>Streamlit: <a href="http://54.164.101.19:8501/" target="_blank">http://54.164.101.19:8501/</a></p>
+<p>FastAPI: <a href="http://54.164.101.19:8000/" target="_blank">http://54.164.101.19:8000/</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>Overall the application involves automating the data acquisition process for PDF files using Airflow pipelines to extract and summarise content, with the objective of populating a database systematically.The main goal is to develop effective pipelines that combine text extraction with data integration into a structured format that can be used for retrieval and additional analysis. This automation uses both proprietary and open-source text extraction tools, such as PymuPDF and ConvertAPI, together with state-of-the-art technologies for summarization tasks, such as Python, FastAPI, Streamlit, and OpenAI. The project also makes use of Airflow to manage the workflow and Amazon RDS for database administration, which guarantees a reliable setup for managing and analysing complicated data structures seen in the GAIA dataset.</p>
+<h3 is-upgraded><strong>Technologies and APIs Used:</strong></h3>
+<ul>
+<li><strong>Airflow</strong>: Manages the orchestration of PDF extraction and database population.</li>
+<li><strong>PymuPDF &amp; ConvertAPI</strong>: Used for text extraction from PDF files. PymuPDF serves as the open-source option, while ConvertAPI is the proprietary choice.</li>
+<li><strong>AWS S3</strong>: Storage for unprocessed and processed PDF files.</li>
+<li><strong>MSSQL Database on RDS</strong>: Stores user authentication credentials</li>
+<li><strong>FastAPI</strong>: API layer for handling requests and user authentication.</li>
+<li><strong>Streamlit</strong>: Front-end application for user interaction.</li>
+<li><strong>OpenAI API</strong>: Provides summarization and question-answering capabilities.</li>
+</ul>
+<p><strong>Overview of the GAIA Data Architecture:</strong><img style="width: 601.70px" src="img\\a9689e70cec6e57b.png"></p>
+<p>This data architectural workflow represents the workflow for extracting information from PDF files, processing the data, and serving it to end users via a FastAPI and Streamlined interface:</p>
+<p><strong>Data Extraction and Database Loading:</strong></p>
+<ol type="1" start="1">
+<li><strong>Data source:</strong></li>
+</ol>
+<ul>
+<li>The HuggingFace dataset is the first source of PDF files that the system obtains and stores in an unprocessed AWS S3 bucket. Text extraction from these PDFs is accomplished by integrating Beautiful Soup, an extraction tool, into the workflow. </li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Airflow Pipeline</strong>:</li>
+</ol>
+<ul>
+<li>Airflow orchestrates the entire process. It automates text extraction and loads the extracted data into the system. Airflow triggers the extraction and uploads </li>
+</ul>
+<p><strong>Airflow DAG Overview</strong></p>
+<p>The Airflow DAG is responsible for orchestrating the process of extracting data from PDF files, processing them using PyMuPDF and ConvertAPI, and storing the results in an AWS S3 bucket. This workflow automates the extraction of text, images, and tables from PDF documents and handles the movement of data between S3 buckets.</p>
+<h4 is-upgraded><strong>Key Functionalities</strong></h4>
+<ol type="1" start="1">
+<li><strong>S3 Integration for PDF Management</strong></li>
+</ol>
+<ul>
+<li>The DAG integrates with AWS S3 to manage unprocessed and processed PDF files.</li>
+<li>The DAG begins by listing all PDF files from an unprocessed bucket (gaia-pdf-unprocessed) and downloads them for further processing.</li>
+<li>Once processed, the extracted data (text, images, and tables) are uploaded to a processed S3 bucket (gaia-pdf-processed).</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>PyMuPDF for PDF Extraction</strong></li>
+</ol>
+<ul>
+<li>The DAG uses <strong>PyMuPDF</strong> as the open-source PDF processing tool to extract:</li>
+<li><strong>Text</strong>: Extracted from each page of the PDF.</li>
+<li><strong>Tables</strong>: Extracted using heuristics based on text positions.</li>
+<li><strong>Images</strong>: Extracted and saved as PNG files.</li>
+<li>After extraction, the text is stored as JSON, tables are saved as CSV files, and images are stored in their respective formats.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>ConvertAPI for PDF Processing</strong></li>
+</ol>
+<ul>
+<li><strong>ConvertAPI</strong> is utilized as an additional PDF processing tool that provides:</li>
+<li><strong>Text extraction</strong>: The text from the PDF is converted and stored as raw text.</li>
+<li><strong>Table extraction</strong>: Extracted and stored in CSV format.</li>
+<li><strong>Image extraction</strong>: Extracts images and saves them as PNG files.</li>
+<li>ConvertAPI offers a proprietary solution, acting as a backup or alternative to PyMuPDF when needed.</li>
+</ul>
+<ol type="1" start="4">
+<li><strong>Parallel Processing with Airflow</strong></li>
+</ol>
+<ul>
+<li>Both <strong>PyMuPDF</strong> and <strong>ConvertAPI</strong> process PDFs in parallel.</li>
+<li>After downloading the PDFs, the files are processed simultaneously using both tools to provide flexibility and redundancy in the extraction process.</li>
+</ul>
+<ol type="1" start="5">
+<li><strong>XCom for Data Transfer Between Tasks</strong></li>
+</ol>
+<ul>
+<li>Airflow&#39;s <strong>XCom</strong> feature is used to pass data between tasks. For example:</li>
+<li>The list of PDF files fetched from S3 is passed to the download task.</li>
+<li>Paths of downloaded PDFs are passed to the extraction tasks.</li>
+<li>Paths of extracted files (text, images, tables) are passed to the upload task for final storage in S3.</li>
+</ul>
+<ol type="1" start="6">
+<li><strong>Error Handling and Logging</strong></li>
+</ol>
+<ul>
+<li>The DAG includes retry mechanisms and error handling to manage potential issues with API requests and file processing.</li>
+<li>Status codes and error messages are logged for transparency, especially when dealing with ConvertAPI or AWS S3 failures.</li>
+</ul>
+<ol type="1" start="7">
+<li><strong>Uploading Results to S3</strong></li>
+</ol>
+<ul>
+<li>After extraction, the results (text, tables, images) are uploaded back to the S3 bucket (gaia-pdf-processed).</li>
+<li>The results are organized by extraction method (PyMuPDF or ConvertAPI) and uploaded in their respective formats (JSON, CSV, PNG).</li>
+<li>the processed data to another S3 bucket (processed data).</li>
+</ul>
+<h4 is-upgraded><strong>FastAPI Overview</strong></h4>
+<p>FastAPI acts as the backend for managing user authentication, file processing, and communication with various APIs and services such as AWS S3 and OpenAI.</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\b18aa316f1c89430.png"></p>
+<h5 is-upgraded><strong>Key Components</strong></h5>
+<ol type="1" start="1">
+<li><strong>Authentication with JWT (JSON Web Tokens):</strong></li>
+</ol>
+<ul>
+<li>FastAPI uses JWT to handle secure user authentication.</li>
+<li>Passwords are hashed using the bcrypt algorithm.</li>
+<li>Users can sign up and log in to receive a token, which is used for authorized requests (such as summarising PDFs or asking questions).</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Database Connection:</strong></li>
+</ol>
+<ul>
+<li>FastAPI connects to an Amazon RDS instance running Microsoft SQL Server to store user data.</li>
+<li>Environment variables (RDS_ENDPOINT, RDS_USERNAME, RDS_PASSWORD, RDS_DATABASE) are used to connect to the database using pyODBC.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>AWS S3 for PDF Management:</strong></li>
+</ol>
+<ul>
+<li>Unprocessed PDFs are uploaded to an S3 bucket (gaia-pdf-unprocessed), and extracted and processed data (text, images, tables) are stored in a separate bucket (gaia-pdf-processed).</li>
+<li>The boto3 library is used to interact with S3 and fetch the PDF files for processing.</li>
+</ul>
+<ol type="1" start="4">
+<li><strong>Text Extraction and Summarization:</strong></li>
+</ol>
+<ul>
+<li>PDFs are extracted using either <strong>PyMuPDF</strong> (open-source) or <strong>ConvertAPI</strong> (proprietary), depending on user choice.</li>
+<li>The extracted text is processed using OpenAI&#39;s GPT-3.5 model to summarise the content.</li>
+<li>FastAPI chunks text larger than 13,000 tokens and summarises each chunk separately using OpenAI.</li>
+</ul>
+<ol type="1" start="5">
+<li><strong>Question Answering:</strong></li>
+</ol>
+<ul>
+<li>Users can ask questions based on the summarised text using OpenAI&#39;s question-answering model. If the text is too large (exceeding 13,000 tokens), the system chunks it and aggregates answers from each chunk.</li>
+</ul>
+<h5 is-upgraded><strong>FastAPI Endpoints</strong></h5>
+<ol type="1" start="1">
+<li><strong>User Signup (/signup):</strong></li>
+</ol>
+<ul>
+<li>Registers a new user by hashing the password and storing it in the database.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>User Login (/login):</strong></li>
+</ol>
+<ul>
+<li>Logs in the user by verifying credentials and generating a JWT token for further access.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Protected Endpoint (/protected_endpoint):</strong></li>
+</ol>
+<ul>
+<li>Validates the JWT token and grants access to authorised users.</li>
+</ul>
+<ol type="1" start="4">
+<li><strong>Summarise PDF (/summarise/):</strong></li>
+</ol>
+<ul>
+<li>Summarises a PDF file extracted from the processed S3 bucket and returns the summary. The text is processed through OpenAI&#39;s summarization API, with token count verification and chunking applied if needed.</li>
+</ul>
+<ol type="1" start="5">
+<li><strong>Ask Question (/ask-question/):</strong></li>
+</ol>
+<ul>
+<li>Allows users to ask questions based on the PDF content. Similar token counting and chunking logic are applied if the text is large.</li>
+</ul>
+<h4 is-upgraded><strong>Streamlit Overview</strong></h4>
+<p>Streamlit provides the user-facing interface, allowing users to interact with the system by uploading PDFs, viewing extracted data, generating summaries, and asking questions.</p>
+<h5 is-upgraded><strong>Key Features of Streamlit Application</strong></h5>
+<ol type="1" start="1">
+<li><strong>PDF Upload and Preview</strong>:</li>
+</ol>
+<ul>
+<li>Users can select a PDF from the unprocessed S3 bucket to preview directly in the app.</li>
+<li>The selected PDF is displayed in an iframe, allowing users to view the content before processing.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Text, Tables, and Images Extraction</strong>:</li>
+</ol>
+<ul>
+<li>Once a PDF is selected, users can choose an extraction method (PyMuPDF or ConvertAPI).</li>
+<li>The extracted text, tables, and images from the processed S3 bucket are displayed.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Summarization:</strong></li>
+</ol>
+<ul>
+<li>After extraction, users can click to summarize the PDF. Streamlit sends a request to FastAPI, which summarizes the content using OpenAI and displays the summary.</li>
+</ul>
+<ol type="1" start="4">
+<li><strong>Question Answering:</strong></li>
+</ol>
+<ul>
+<li>After summarization, users can ask questions about the PDF&#39;s content. Streamlit interacts with FastAPI to send the question and receive an AI-generated answer.</li>
+</ul>
+<ol type="1" start="5">
+<li><strong>User Authentication:</strong></li>
+</ol>
+<ul>
+<li>Users are required to log in before using any of the PDF processing features.</li>
+<li>Upon successful login, a JWT token is stored in the session state and used for making authenticated API requests.</li>
+</ul>
+<h3 is-upgraded><strong>Application Flow:</strong></h3>
+<ol type="1" start="1">
+<li><strong>User Authentication:</strong></li>
+</ol>
+<ul>
+<li>The user signs up or logs in through Streamlit. After login, a JWT token is received and stored.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>PDF Selection and Preview:</strong></li>
+</ol>
+<ul>
+<li>The user selects a PDF from the unprocessed bucket, previews it, and proceeds to extract the content.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Content Extraction:</strong></li>
+</ol>
+<ul>
+<li>The user chooses an extraction method (PyMuPDF or ConvertAPI). Text, tables, and images are extracted and displayed from the processed bucket.</li>
+</ul>
+<ol type="1" start="4">
+<li><strong>Summarization and Q&amp;A:</strong></li>
+</ol>
+<ul>
+<li>The user can summarise the extracted content using OpenAI. Once summarised, they can also ask questions related to the content, with answers generated by the OpenAI model.</li>
+</ul>
+<ol type="1" start="5">
+<li><strong>API Interactions:</strong></li>
+</ol>
+<ul>
+<li>Streamlit interacts with FastAPI for all backend services, such as user authentication, PDF summarization, and question-answering. FastAPI handles the communication with OpenAI, AWS S3, and the database.</li>
+</ul>
+<h3 is-upgraded><strong>Proof of Concept</strong></h3>
+<p>In the <strong>proof of concept (PoC)</strong> phase, we focused on testing the APIs and validating critical components of the application to ensure the functionality and compatibility of the chosen technologies. Here&#39;s a detailed overview of the PoC:</p>
+<h4 is-upgraded><strong>1. API Testing: ConvertAPI vs. PyMuPDF</strong></h4>
+<p>We conducted thorough tests on both <strong>ConvertAPI</strong> and <strong>PyMuPDF</strong> to determine their effectiveness in extracting content from PDF files. Each API was evaluated based on the following criteria:</p>
+<ul>
+<li><strong>Image extraction</strong>:</li>
+<li>ConvertAPI and PyMuPDF were tested for their ability to extract images from the PDF files.</li>
+<li><strong>PyMuPDF</strong> demonstrated a strong ability to extract images accurately from the PDF.</li>
+<li>We also compared the efficiency of ConvertAPI&#39;s image extraction for larger PDF files to ensure performance at scale.</li>
+<li><strong>Table extraction</strong>:</li>
+<li>Extracting tables from PDF files was another critical area of evaluation. Using <strong>PyMuPDF</strong>, we tested its ability to handle table structures and parse them accurately.</li>
+<li>We compared the outputs from both <strong>PyMuPDF</strong> and <strong>ConvertAPI</strong> to ensure proper alignment of data (rows and columns) and assessed the handling of complex table structures.</li>
+<li><strong>Summary of Findings</strong>:</li>
+<li><strong>PyMuPDF</strong> was selected as the primary extraction tool for image and table extraction due to its open-source nature, ease of use, and high performance in handling complex PDFs.</li>
+<li><strong>ConvertAPI</strong> was used as a secondary, proprietary option, offering additional extraction capabilities when required.</li>
+</ul>
+<h4 is-upgraded><strong>2. Email Field Validation</strong></h4>
+<p>To ensure proper validation and security of user inputs during the signup process, we implemented and tested <strong>email field validation</strong>. This validation ensures that only valid email formats are accepted during user registration.</p>
+<ul>
+<li><strong>Pydantic&#39;s EmailStr Validation</strong>:</li>
+<li>The <strong>email field</strong> in the FastAPI User model leverages <strong>Pydantic&#39;s EmailStr</strong> type, which automatically validates the structure and format of email addresses.</li>
+<li>During the testing phase, invalid email formats were rejected with appropriate error messages, while valid emails passed the validation process.</li>
+<li><strong>Testing Scenarios</strong>:</li>
+<li><strong>Valid email inputs</strong> such as example@test.com successfully registered users.</li>
+<li><strong>Invalid email inputs</strong> such as example@.com, exampletest.com, and @test.com were rejected with a 400 status code and detailed error messages such as <strong>&#34;Invalid email format&#34;</strong>.</li>
+</ul>
+<p>This ensures that only valid email addresses can be used during the signup process, providing an extra layer of data integrity and security for the application.</p>
+<h4 is-upgraded><strong>3. Jupyter Notebook Testing for API Validation</strong></h4>
+<p>During the PoC, we used <strong>Jupyter Notebook</strong> to perform in-depth validation of the APIs and verify the outputs. The testing flow included:</p>
+<ul>
+<li><strong>Image extraction</strong>:</li>
+<li>We tested the image extraction capabilities by passing PDF files through PyMuPDF in the notebook and validating the extracted image data.</li>
+<li>The notebook environment allowed us to visualize and inspect the extracted images, confirming their accuracy.</li>
+<li><strong>Table extraction</strong>:</li>
+<li>We validated the table structures extracted using PyMuPDF by loading the extracted data into <strong>Pandas DataFrames</strong> for inspection.</li>
+<li>The DataFrame allowed us to visually confirm that the tables were properly extracted and structured.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Walkthrough of the Application" duration="0">
+        <p><strong>Streamlit UI:</strong></p>
+<p>1) Home page:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\fc0e28aaf30075ce.png"></p>
+<p>2) Sign Up page:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\bb3ba8002de54b4a.png"></p>
+<p>3) Login page</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\40894dc99f862fca.png"></p>
+<p>4) PDF Extraction:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\c96a8dfc3c9b9f68.png"></p>
+<p>5) Summarization pages:<img style="width: 601.70px" src="img\\dcd471ebbf0c7b1c.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\8ac5c0b30e107ddf.png"></p>
+<p class="image-container"><img style="width: 602.00px" src="img\\a81ae9ff1c65168e.png"></p>
+<p><strong>Airflow:</strong></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\e22f37e342c78197.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="References:" duration="0">
+        <ol type="1" start="1">
+<li><a href="https://huggingface.co/datasets/gaia-benchmark/GAIA" target="_blank">https://huggingface.co/datasets/gaia-benchmark/GAIA</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></li>
+<li><a href="https://requests.readthedocs.io/en/latest/" target="_blank">https://requests.readthedocs.io/en/latest/</a></li>
+<li><a href="https://docs.streamlit.io/" target="_blank">https://docs.streamlit.io/</a></li>
+<li><a href="https://blog.streamlit.io/crafting-a-dashboard-app-in-python-using-streamlit/" target="_blank">https://blog.streamlit.io/crafting-a-dashboard-app-in-python-using-streamlit/</a></li>
+<li><a href="https://openai.com/chatgpt/" target="_blank">https://openai.com/chatgpt/</a></li>
+<li><a href="https://platform.openai.com/docs/quickstart" target="_blank">https://platform.openai.com/docs/quickstart</a></li>
+<li><a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken" target="_blank">https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken</a></li>
+<li><a href="https://cookbook.openai.com/examples/chat_finetuning_data_prep" target="_blank">https://cookbook.openai.com/examples/chat_finetuning_data_prep</a></li>
+<li><a href="https://aws.amazon.com/console/" target="_blank">https://aws.amazon.com/console/</a></li>
+<li><a href="https://docs.aws.amazon.com/s3/" target="_blank">https://docs.aws.amazon.com/s3/</a></li>
+<li><a href="https://platform.openai.com/docs/guides/moderation" target="_blank">https://platform.openai.com/docs/guides/moderation</a></li>
+<li><a href="https://pandas.pydata.org/docs/index.html" target="_blank">https://pandas.pydata.org/docs/index.html</a></li>
+<li><a href="https://matplotlib.org/stable/index.html" target="_blank">https://matplotlib.org/stable/index.html</a></li>
+</ol>
+<p><strong>PDF Extraction and API Evaluation Analysis:</strong></p>
+<p><a href="https://docs.google.com/document/d/1k9nY_B2nkaa4ssI3-WlZyn4v-BOVgJcl/edit?usp=sharing&ouid=108364673239048570372&rtpof=true&sd=true" target="_blank">PDF Extraction API Evaluation Template.docx</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
