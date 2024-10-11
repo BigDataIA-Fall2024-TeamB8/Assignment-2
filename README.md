@@ -4,7 +4,7 @@
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR
 ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 Contribution overall:
-1. Sathvik Vadavatha : Airflow Pipeline
+1. Sathvik Vadavatha : Data Extraction, Airflow Pipeline, Docker Containers, Deployment
 2. Rutuja Patil: FastAPI, JWT Authentication, 
 3. Sakshi Aade: Streamlit, Testing Validations, 
 
@@ -45,7 +45,7 @@ ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
 1. **Launch an EC2 instance** with Amazon Linux 2 or Ubuntu as the operating system.
  
  2. **Connect to the EC2 instance**:
-   ```bash
+   
    ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
  
 3. Update the instance:
