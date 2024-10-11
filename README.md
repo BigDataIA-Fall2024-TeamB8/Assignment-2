@@ -9,9 +9,9 @@ Contribution overall:
 3. Sakshi Aade: Streamlit, Testing, Validations
 
 # EC2 Instances links (Running until 10/24/2024):
-# Streamlit application link: http://54.164.101.19:8501/
-# FastAPI application link: http://54.164.101.19:8000/
-# Airflow application link: http://54.164.101.19:8080/
+# Streamlit application link: http://18.233.226.150:8501/
+# FastAPI application link: http://18.233.226.150:8000/docs
+# Airflow application link: http://18.233.226.150:8080/home
 
 ------
 # Application demo: https://drive.google.com/file/d/1F5hy4KcokiVmt1q3c51olVOWzAlcX3OZ/view?usp=sharing
