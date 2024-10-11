@@ -132,30 +132,30 @@ Check Running Containers:
 Verify if the containers are up and running:
 docker ps
 
-Access the Applications:
+### Access the Applications:
 Airflow: You can access Airflow via your EC2 instance's public IP on the port you've configured (typically port 8080).
 FastAPI: FastAPI runs on port 8000 (or any port you have configured).
 Streamlit: Streamlit runs on port 8501 (or any port you have configured).
 
 
-Additional Notes
+### Additional Notes
 Environment Variables: Ensure that your .env files contain the correct values, such as AWS credentials, database credentials, and API keys.
 Airflow DAGS: Place your DAGs in the dags/ directory of the airflow/ folder.
 Image Upload: For FastAPI and Streamlit, ensure that uploaded images are stored in the images/ folder in the fastapi_streamlit/ directory.
 
 
-Troubleshooting
+### Troubleshooting
 If any services fail to start, check the logs with:
 Ensure that all environment variables are correctly set in the .env files.
 Ensure that the security group associated with the EC2 instance allows inbound traffic on the required ports (e.g., 8000, 8501, 8080).
 
 
-Stopping the Containers
+### Stopping the Containers
 To stop the running containers:
 codedocker-compose down
 
 
-Conclusion
+### Conclusion
 This setup will help you run Airflow, FastAPI, and Streamlit using Docker in a production-like environment. If you have any issues, check the logs and ensure that your EC2 instance is properly configured with the necessary security group rules.
 
  
