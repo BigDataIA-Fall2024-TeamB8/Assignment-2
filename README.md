@@ -10,6 +10,8 @@ Contribution overall:
 
 # Demo link:
 # Streamlit application link: http://54.164.101.19:8501/
+# FastAPI application link: http://54.164.101.19:8000/
+# Airflow application link: http://54.164.101.19:8080/
 
 ------
 # Application demo: https://drive.google.com/file/d/1F5hy4KcokiVmt1q3c51olVOWzAlcX3OZ/view?usp=sharing
