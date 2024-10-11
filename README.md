@@ -30,27 +30,28 @@ This project sets up Airflow, FastAPI, and Streamlit using Docker for managing w
 The directory structure of the project is as follows:
  
 dep/
-├── airflow/
-│   ├── .env
-│   ├── dags/
-│   ├── docker-compose.yaml
-│   ├── Dockerfile
-│   ├── logs/
-│   ├── plugins/
-│   ├── postgres_data/
-│   └── requirements.txt
-├── fastapi_streamlit/
-│   ├── .env
-│   ├── docker-compose.yaml
-│   ├── Dockerfile.fastapi
-│   ├── Dockerfile.streamlit
-│   ├── fast_api.py
-│   ├── streamlit_app.py
-│   ├── requirements.txt
-│   ├── images/
-│   └── __pycache__/
-├── HuggingFace_S3_Upload.py
-└── docker-compose.yaml
+- airflow/
+  - .env
+  - dags/
+  - docker-compose.yaml
+  - Dockerfile
+  - logs/
+  - plugins/
+  - postgres_data/
+  - requirements.txt
+- fastapi_streamlit/
+  - .env
+  - docker-compose.yaml
+  - Dockerfile.fastapi
+  - Dockerfile.streamlit
+  - fast_api.py
+  - streamlit_app.py
+  - requirements.txt
+  - images/
+  - __pycache__/
+- HuggingFace_S3_Upload.py
+- docker-compose.yaml
+
 
 
 ---
