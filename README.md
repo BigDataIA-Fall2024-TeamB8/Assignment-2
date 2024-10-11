@@ -66,10 +66,10 @@ dep/
 
 ## EC2 Setup with Docker and Docker Compose
 
-### Step 1: Launch EC2 Instance
+### Launch EC2 Instance
 - Choose **Amazon Linux 2** or **Ubuntu** as your operating system.
 
-### Step 2: Connect to the EC2 Instance
+### Connect to the EC2 Instance
 
 ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
 ### EC2 Setup with Docker and Docker Compose
