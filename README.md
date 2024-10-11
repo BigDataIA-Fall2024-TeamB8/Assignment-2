@@ -6,10 +6,11 @@ ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 Contribution overall:
 1. Sathvik Vadavatha : Data Extraction, Airflow Pipeline, Docker Containers, Deployment
 2. Rutuja Patil: FastAPI, JWT Authentication, Endpoint testing
-3. Sakshi Aade: Streamlit, Testing Validations, 
+3. Sakshi Aade: Streamlit, Testing Validations
 
 # Demo link:
 # Streamlit application link: http://54.164.101.19:8501/
+# Application demo: https://docs.google.com/document/d/1k9nY_B2nkaa4ssI3-WlZyn4v-BOVgJcl/edit?usp=drive_link&ouid=108364673239048570372&rtpof=true&sd=true
 
 All links and submissions provided in repositry+codelabs document
 
