@@ -20,28 +20,69 @@ This project sets up Airflow, FastAPI, and Streamlit using Docker for managing w
 The directory structure of the project is as follows:
  
 Assignment2/ │ ├── airflow/ │ ├── .env │ ├── dags/ │ ├── docker-compose.yaml │ ├── Dockerfile │ ├── logs/ │ ├── plugins/ │ ├── postgres_data/ │ └── requirements.txt │ ├── fastapi_streamlit/ │ ├── .env │ ├── docker-compose.yaml │ ├── Dockerfile.fastapi │ ├── Dockerfile.streamlit │ ├── fast_api.py │ ├── streamlit_app.py │ ├── requirements.txt │ ├── images/ │ └── pycache/ │ ├── HuggingFace_S3_Upload.py └── docker-compose.yaml
-markdownCopy code## Prerequisites1. AWS EC2 instance (or any server) with Docker and Docker Compose installed.2. SSH access to your EC2 instance.3. A `.pem` key to connect to your EC2 instance.4. Your `.env` files containing sensitive information such as AWS credentials and API keys.
-### EC2 Setup with Docker and Docker Compose1. **Launch an EC2 instance** with Amazon Linux 2 or Ubuntu as the operating system.
-   1. **Connect to the EC2 instance**:
+markdownCopy code
+
+---
+
+## Prerequisites
+1. **AWS EC2 instance** (or any server) with Docker and Docker Compose installed.
+2. **SSH access** to your EC2 instance.
+3. A `.pem` key to connect to your EC2 instance.
+4. **.env files** with sensitive information such as AWS credentials, database credentials, and API keys.
+
+---
+
+## EC2 Setup with Docker and Docker Compose
+
+### Step 1: Launch EC2 Instance
+- Choose **Amazon Linux 2** or **Ubuntu** as your operating system.
+
+### Step 2: Connect to the EC2 Instance
+```bash
+ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
+### EC2 Setup with Docker and Docker Compose
+
+1. **Launch an EC2 instance** with Amazon Linux 2 or Ubuntu as the operating system.
+ 
+ 2. **Connect to the EC2 instance**:
    ```bash
    ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
  
-Update the instance:
+3. Update the instance:
  
 For Ubuntu:
-Install Docker:
+Install Docker: sudo yum update -y
 
-For Amazon Linux 2:
+For Amazon Linux 2: sudo apt-get update && sudo apt-get upgrade -y
+
+4. Install Docker:
+For Amazon Linux 2: sudo amazon-linux-extras install docker -y
+
+For Ubuntu: For Ubuntu: sudo apt-get install docker.io -y
+
+
+5. Start and enable Docker: sudo service docker start
+sudo systemctl enable docker
+
+6. Install Docker Compose: sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+7. Add the EC2 user to the Docker group (so you don’t have to use sudo for Docker commands): sudo usermod -aG docker ec2-user
+
  
-For Ubuntu:
-Start and enable Docker:
-Install Docker Compose:
-Add the EC2 user to the Docker group (so you don’t have to use sudo for Docker commands):
- 
-Log out and log back in for the group changes to take effect:
-File Transfer to EC2
+Log out and log back in for the group changes to take effect: exit
+ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
+
+
+File Transfer to EC2: scp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
+
+
 Transfer the project files from your local machine to the EC2 instance:
 bashCopy codescp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
+
+
 Directory Overview
 airflow/: Contains files for Airflow setup.
 .env: Environment variables for Airflow.
@@ -61,55 +102,57 @@ Build Docker Images:
 
 Navigate to the airflow/ and fastapi_streamlit/ directories separately and run the following commands to build the Docker images:
 For Airflow:
+cd /home/ec2-user/Assignment2/airflow
+docker-compose build
+
  
 For FastAPI and Streamlit:
+cd /home/ec2-user/Assignment2/fastapi_streamlit
+docker-compose build
+
+
 Run the Containers:
 
 After building the images, you can run the containers:
 For Airflow:
+cd /home/ec2-user/Assignment2/airflow
+docker-compose up -d
+
  
 For FastAPI and Streamlit:
-Check Running Containers:
+cd /home/ec2-user/Assignment2/fastapi_streamlit
+docker-compose up -d
 
+
+Check Running Containers:
 Verify if the containers are up and running:
+docker ps
+
 Access the Applications:
 Airflow: You can access Airflow via your EC2 instance's public IP on the port you've configured (typically port 8080).
 FastAPI: FastAPI runs on port 8000 (or any port you have configured).
 Streamlit: Streamlit runs on port 8501 (or any port you have configured).
+
+
 Additional Notes
 Environment Variables: Ensure that your .env files contain the correct values, such as AWS credentials, database credentials, and API keys.
 Airflow DAGS: Place your DAGs in the dags/ directory of the airflow/ folder.
 Image Upload: For FastAPI and Streamlit, ensure that uploaded images are stored in the images/ folder in the fastapi_streamlit/ directory.
+
+
 Troubleshooting
 If any services fail to start, check the logs with:
 Ensure that all environment variables are correctly set in the .env files.
 Ensure that the security group associated with the EC2 instance allows inbound traffic on the required ports (e.g., 8000, 8501, 8080).
+
+
 Stopping the Containers
 To stop the running containers:
-bashCopy codedocker-compose down
+codedocker-compose down
+
+
 Conclusion
 This setup will help you run Airflow, FastAPI, and Streamlit using Docker in a production-like environment. If you have any issues, check the logs and ensure that your EC2 instance is properly configured with the necessary security group rules.
-vbnetCopy codeThis README provides all the necessary steps to set up the project using Docker on an EC2 instance. Let me know if you'd like to add or modify any sections!
-bashCopy codedocker-compose logs
-bashCopy codedocker ps
-bashCopy codecd /home/ec2-user/Assignment2/fastapi_streamlit
-docker-compose up -d
-bashCopy codecd /home/ec2-user/Assignment2/airflow
-docker-compose up -d
-bashCopy codecd /home/ec2-user/Assignment2/fastapi_streamlit
-docker-compose build
-bashCopy codecd /home/ec2-user/Assignment2/airflow
-docker-compose build
-bashCopy codeexitssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
-bashCopy codesudo usermod -aG docker ec2-user
-bashCopy codesudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
-bashCopy codesudo service docker start
-sudo systemctl enable docker
-bashCopy codesudo apt-get install docker.io -y
-bashCopy codesudo amazon-linux-extras install docker -y
-bashCopy codesudo apt-get update && sudo apt-get upgrade -y
-bashCopy codesudo yum update -y
+
  
  
