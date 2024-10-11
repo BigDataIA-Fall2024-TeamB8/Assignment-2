@@ -16,6 +16,7 @@ All links and submissions provided in repositry+codelabs document
 Here’s the README file for setting up the project with Docker based on your directory structure.
 markdownCopy code# Assignment 2: Dockerized Airflow, FastAPI, and Streamlit Setup
 This project sets up Airflow, FastAPI, and Streamlit using Docker for managing workflows, API services, and a web interface for summarizing and asking questions on PDF content. 
+## Architectral Diagram:
 ![image](https://github.com/user-attachments/assets/c78b24d8-a971-4190-983d-579727b009f4)
 
 
