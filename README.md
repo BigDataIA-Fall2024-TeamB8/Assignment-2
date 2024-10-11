@@ -5,7 +5,7 @@ WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR
 ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 Contribution overall:
 1. Sathvik Vadavatha : Data Extraction, Airflow Pipeline, Docker Containers, Deployment
-2. Rutuja Patil: FastAPI, JWT Authentication, 
+2. Rutuja Patil: FastAPI, JWT Authentication, Endpoint testing
 3. Sakshi Aade: Streamlit, Testing Validations, 
 
 # Demo link:
@@ -16,6 +16,9 @@ All links and submissions provided in repositry+codelabs document
 Here’s the README file for setting up the project with Docker based on your directory structure.
 markdownCopy code# Assignment 2: Dockerized Airflow, FastAPI, and Streamlit Setup
 This project sets up Airflow, FastAPI, and Streamlit using Docker for managing workflows, API services, and a web interface for summarizing and asking questions on PDF content. 
+![image](https://github.com/user-attachments/assets/c78b24d8-a971-4190-983d-579727b009f4)
+
+
 ## Project Structure
 The directory structure of the project is as follows:
  
