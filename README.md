@@ -46,41 +46,50 @@ ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
  
  2. **Connect to the EC2 instance**:
    
-   ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
+ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
  
 3. Update the instance:
  
-For Ubuntu:
-Install Docker: sudo yum update -y
+For Ubuntu: sudo apt-get update && sudo apt-get upgrade -y
+For Amazon Linux 2: sudo yum update -y
 
+
+Install Docker: 
+
+For Ubuntu:sudo yum update -y
 For Amazon Linux 2: sudo apt-get update && sudo apt-get upgrade -y
 
 4. Install Docker:
+   
 For Amazon Linux 2: sudo amazon-linux-extras install docker -y
-
-For Ubuntu: For Ubuntu: sudo apt-get install docker.io -y
+For Ubuntu:  sudo apt-get install docker.io -y
 
 
 5. Start and enable Docker: sudo service docker start
 sudo systemctl enable docker
 
-6. Install Docker Compose: sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+6. Install Docker Compose:
+
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 
-7. Add the EC2 user to the Docker group (so you don’t have to use sudo for Docker commands): sudo usermod -aG docker ec2-user
+7. Add the EC2 user to the Docker group (so you don’t have to use sudo for Docker commands):
+   sudo usermod -aG docker ec2-user
 
  
-Log out and log back in for the group changes to take effect: exit
+8. Log out and log back in for the group changes to take effect:
+
+exit
 ssh -i /path/to/your-key.pem ec2-user@<EC2_PUBLIC_IP_ADDRESS>
 
 
-File Transfer to EC2: scp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
+### File Transfer to EC2:
 
 
 Transfer the project files from your local machine to the EC2 instance:
-bashCopy codescp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
+scp -i /path/to/your-key.pem -r /local/path/to/Assignment2 ec2-user@<EC2_PUBLIC_IP_ADDRESS>:/home/ec2-user/
 
 
 ### Directory Overview
